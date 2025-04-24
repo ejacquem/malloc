@@ -45,11 +45,23 @@ const char	*handle_args(const char *c, va_list args, t_format *t_f)
 	else if (*c == 's')
 		ft_prints(va_arg(args, char *), t_f);
 	else if (*c == 'p')
+	{
+		COLOR_PRINT_POINTER;
 		ft_printp(va_arg(args, unsigned long long), t_f);
+		COLOR_PRINT_RESET;
+	}
 	else if (*c == 'd' || *c == 'i')
+	{
+		COLOR_PRINT_NUMBER;
 		ft_printnb(tounsigned(va_arg(args, int), t_f), t_f, 10);
+		COLOR_PRINT_RESET;
+	}
 	else if (*c == 'u')
+	{
+		COLOR_PRINT_NUMBER;
 		ft_printnb(tounsigned(va_arg(args, unsigned int), t_f), t_f, 10);
+		COLOR_PRINT_RESET;
+	}
 	else if (*c == 'x')
 		ft_printnb(va_arg(args, unsigned int), t_f, 16);
 	else if (*c == 'X')
@@ -60,7 +72,9 @@ const char	*handle_args(const char *c, va_list args, t_format *t_f)
 	}
 	else if (*c == 'l' && *(c + 1) == 'd')
 	{
+		COLOR_PRINT_NUMBER;
 		ft_printnb(tounsigned(va_arg(args, long), t_f), t_f, 10);
+		COLOR_PRINT_RESET;
 		return (c + 2);
 	}
 	return (c + 1);

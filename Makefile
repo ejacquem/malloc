@@ -4,12 +4,13 @@ LIBS = $(PRINTF)
 
 CFLAGS = -g #-Wall -Werror -Wextra
 
-SRC = malloc.c
-TEST = test/tester.c
+SRC = src/malloc.c src/utils.c src/show_alloc_mem.c
+TEST = test/test1.c
 TESTER = tester
+TESTER_STD = tester_std
 
 OBJ = $(SRC:.c=.o)
-TESTOBJ = $(OBJ) $(TEST:.c=.o)
+TESTOBJ = $(TEST:.c=.o)
 
 ifeq ($(HOSTTYPE),)
     HOSTTYPE := $(shell uname -m)_$(shell uname -s)
@@ -29,15 +30,23 @@ sym:
 
 # TESTER -----------------------------------
 
-test: all $(TESTOBJ)
+compile_malloc_test: $(TESTOBJ)
+	@cc -g $(CFLAGS) -o $(TESTER_STD) $(TESTOBJ)
+
+compile_test: all $(TESTOBJ)
 	@cc -g $(CFLAGS) -o $(TESTER) $(TESTOBJ) $(LIBS)
 
-runtest: test
-#	@./tester
-#	LD_PRELOAD=./libft_malloc.so ./tester
-	LD_PRELOAD=./libft_malloc.so valgrind ./tester
-#	/usr/bin/time -v ./tester
-#	/usr/bin/time -v ./tester 2>&1| grep -E "Page|CPU|faults"
+test: compile_test
+#	@./$(TESTER)
+	LD_PRELOAD=./libft_malloc.so ./$(TESTER)
+
+test_page: compile_test
+#	LD_PRELOAD=./libft_malloc.so /usr/bin/time -v ./$(TESTER)
+	LD_PRELOAD=./libft_malloc.so /usr/bin/time -v ./$(TESTER) 2>&1| grep -E "Page|CPU|faults|time"
+
+test_std: compile_malloc_test
+#	/usr/bin/time -v ./$(TESTER_STD)
+	/usr/bin/time -v ./$(TESTER_STD) 2>&1| grep -E "Page|CPU|faults|time"
 
 clean:
 	rm -f $(OBJ) $(TESTOBJ) libft_malloc.so

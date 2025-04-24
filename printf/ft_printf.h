@@ -22,6 +22,20 @@
 # define MAX_INT 2147483647
 # define MIN_INT -2147483648
 
+#define COLOR_PRINT_RESET	write(1, "\x1b[0m", 4)
+#define COLOR_PRINT_BLACK	write(1, "\x1b[30m", 5)
+#define COLOR_PRINT_RED		write(1, "\x1b[31m", 5)
+#define COLOR_PRINT_GREEN	write(1, "\x1b[32m", 5)
+#define COLOR_PRINT_YELLOW	write(1, "\x1b[38;5;228m", 11)
+#define COLOR_PRINT_SKY		write(1, "\x1b[38;5;123m", 11)
+#define COLOR_PRINT_BLUE	write(1, "\x1b[34m", 5)
+#define COLOR_PRINT_MAGENTA	write(1, "\x1b[35m", 5)
+#define COLOR_PRINT_CYAN	write(1, "\x1b[36m", 5)
+#define COLOR_PRINT_WHITE	write(1, "\x1b[37m", 5)
+
+#define COLOR_PRINT_NUMBER COLOR_PRINT_YELLOW
+#define COLOR_PRINT_POINTER COLOR_PRINT_SKY
+
 typedef struct s_format
 {
 	int		n1;
