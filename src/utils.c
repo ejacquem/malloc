@@ -6,7 +6,7 @@ size_t align_up(size_t size, size_t base)
     return (size + base - 1) & ~(base - 1);
 }
 
-// get data for TINY or SMALL block
+// get data (size) for TINY or SMALL block
 size_t get_block_data(void *block)
 {
     return *(size_t *)(block);

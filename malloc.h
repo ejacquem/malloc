@@ -41,7 +41,7 @@ struct zone_data
 
 extern struct malloc_data data;
 
-// #define DEBUG 0
+#define DEBUG
 
 #ifdef DEBUG
     #define LOG(fmt, ...) ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__)

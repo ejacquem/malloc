@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define START_MALLOC_SIZE 1024*1024*128
+// #define START_MALLOC_SIZE 1024*1024*128
+// #define STOP_MALLOC_SIZE  1024
+
+#define START_MALLOC_SIZE 1024*1024
 #define STOP_MALLOC_SIZE  1024
 
 void dummy() { return; }
@@ -20,6 +23,9 @@ void *reduce(void *ptr, int size) {
     ptr2 = reduce(ptr2, size / 2);
 
     if (*((int *)ptr1) != size / 2 || *((int *)ptr2) != size / 2) {
+        printf("*((int *)ptr1) : %d\n", *((int *)ptr1));
+        printf("*((int *)ptr2) : %d\n", *((int *)ptr2));
+        printf("size / 2 : %d\n", size / 2);
       printf("Memory failed to contain correct data after many allocations!\n");
       exit(2);
     }

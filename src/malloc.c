@@ -25,6 +25,34 @@ int init_zone(void **zone, size_t size)
     return *zone != NULL;
 }
 
+void join_next_block(void *block)
+{
+    size_t block_data = get_block_data(block);
+    size_t block_size = get_block_size(block_data, S_META_DATA_SIZE);
+    size_t next_block_data = get_block_data(block + block_size);
+    size_t next_block_size = get_block_size(next_block_data, S_META_DATA_SIZE);
+    *(size_t *)block = block_size + next_block_size;
+    // *(size_t *)block = SET_FREE(*(size_t *)block);
+}
+
+// assign new size to the current block, split into 2 blocks if there is enough space for a new block
+// return ptr to user data
+void *replace_block(void *block, size_t size)
+{
+    size_t new_block_size = get_block_size(size, S_META_DATA_SIZE);
+    size_t block_size = get_block_size(get_block_data(block), S_META_DATA_SIZE);
+    if (new_block_size > block_size)
+        return LOG("ERROR: can't replace a block with a bigger size"), NULL;
+    *(size_t *)block = size;
+    if (new_block_size < block_size) // if new block is smaller, split current block into one full and one free
+    {
+        size_t *next_block = (size_t *)(block + new_block_size); 
+        *next_block = block_size - new_block_size; // set next block size to (current - new)
+        *next_block = SET_FREE(*next_block);
+    }
+    return block + S_META_DATA_SIZE;
+}
+
 // algorithm used for TINY and SMALL zone
 void *browse_zone(void *zone, size_t zone_size, size_t size)
 {
@@ -61,14 +89,7 @@ void *browse_zone(void *zone, size_t zone_size, size_t size)
         if (size <= get_block_usable_size(alloc_size, S_META_DATA_SIZE) && IS_FREE(block_data)) // found a free block big enough
         {
             LOG(" - Found free block");
-            *(size_t *)block = size;
-            if (new_block_size < block_size) // if new block is smaller, split current block into one full and one free
-            {
-                size_t *next_block = (size_t *)(block + new_block_size); 
-                *next_block = block_size - new_block_size; // set next block size to (current - new)
-                *next_block = SET_FREE(*next_block);
-            }
-            return block + S_META_DATA_SIZE;
+            return replace_block(block, size);
         }
         i += block_size;
     }
@@ -131,18 +152,25 @@ void *browse_heap(void **zone, size_t size)
         block_data->next = 0;
         return get_user_data_pointer(block_data);
     }
-    
-    // LOG("Searching free space");
+
+    LOG("Searching free space");
     block = *zone;
     while (1)
     {
         block_data = block;
-        if (get_block_usable_size(block_data->size, L_META_DATA_SIZE) <= size && IS_FREE(block_data->size)) // found a free block big enough
+        // LOG("Test1 --------");
+        // LOG("block_data->size, %ld", GET_SIZE(block_data->size));
+        // LOG("IS_FREE(block_data->size), %d", IS_FREE(block_data->size));
+        // LOG("size, %ld", size);
+        // LOG("usable data, %ld", get_block_usable_size(block_data->size, L_META_DATA_SIZE));
+        // LOG("block_data->next, %p", block_data->next);
+        if (size <= get_block_usable_size(block_data->size, L_META_DATA_SIZE) && IS_FREE(block_data->size)) // found a free block big enough
         {
             LOG("Found some nice free space :)");
             block_data->size = SET_NOT_FREE(block_data->size);
             return get_user_data_pointer(block_data);
         }
+        // LOG("Test2");
         if(block_data->next == NULL) // end of large zones
             break;
         block = block_data->next;
@@ -186,10 +214,46 @@ void *malloc(size_t size)
 
 void *realloc(void *ptr, size_t size)
 {
+    LOG("--- Realloc called ---");
     if (ptr == NULL)
         return malloc(size);
     if (size == 0)
         return free(ptr), NULL;
+    
+    
+    void *block = ((size_t *)ptr) - 1; // step back 8 bytes
+    size_t block_data = get_block_data(block);
+    size_t alloc_size = GET_SIZE(block_data);
+    size_t block_size = get_block_size(block_data, S_META_DATA_SIZE);
+    
+    if (alloc_size <= SMALL_SIZE)
+    {
+        LOG("Realloc called");
+        size_t block_usable_size = get_block_usable_size(alloc_size, S_META_DATA_SIZE);
+        if (block_usable_size >= size)
+            return ptr;
+        size_t *next_block = (size_t *)(block + block_size);
+        size_t next_block_data = get_block_data(next_block);
+        size_t next_block_size = get_block_size(next_block_data, S_META_DATA_SIZE);
+        if (IS_FREE(*next_block) && (block_usable_size + next_block_size) <= size)
+        {
+            join_next_block(block);
+            return replace_block(block, size);
+        }
+        LOG("Can't realloc for small/tiny");
+    }
+    else
+    LOG("Realloc LARGE");
+
+    // can't add more data, creating new pointer, copy data, free old ptr
+    void *addr = malloc(size);
+    if (addr)
+    {
+        int n = 100;
+        ft_memcpy(addr, ptr, alloc_size);
+        free(ptr);
+        return addr;
+    }
     return NULL;
 }
 
