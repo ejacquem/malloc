@@ -1,4 +1,3 @@
-#include "malloc.h"
 #include "../malloc.h"
 
 size_t align_up(size_t size, size_t base)
@@ -10,6 +9,16 @@ size_t align_up(size_t size, size_t base)
 size_t get_block_size(void *block)
 {
     return *(size_t *)(block) & ~0b1111; // ignore last 4 bits
+}
+
+size_t get_size(size_t size)
+{
+    return size & ~0b1111; // ignore last 4 bits
+}
+
+size_t get_zone_usr_data_ptr(void *zone)
+{
+    return ((struct zone_data *)(zone) + 1);
 }
 
 struct meta_data get_block_meta_data(void *block)
@@ -57,7 +66,7 @@ void print_define()
     if (data.first)
         return;
     data.first = 1;
-    LOGLN;
+    LOG("----- MALLOC INFO -----");
     LOG("TINY_BLOCK_SIZE: %d bytes", TINY_BLOCK_SIZE);
     LOG("TINY_ZONE: %d bytes", TINY_ZONE);
     LOG("TINY_PAGE_NB: %d pages", TINY_PAGE_NB);

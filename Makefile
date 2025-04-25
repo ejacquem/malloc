@@ -5,9 +5,6 @@ LIBS = $(PRINTF)
 CFLAGS = -g #-Wall -Werror -Wextra
 
 SRC = src/malloc.c src/utils.c src/show_alloc_mem.c
-TEST = test/test1.c
-TESTER = tester
-TESTER_STD = tester_std
 
 OBJ = $(SRC:.c=.o)
 TESTOBJ = $(TEST:.c=.o)
@@ -30,23 +27,27 @@ sym:
 
 # TESTER -----------------------------------
 
-compile_malloc_test: $(TESTOBJ)
-	@cc -g $(CFLAGS) -o $(TESTER_STD) $(TESTOBJ)
+TEST_NAME := $(filter test%,$(MAKECMDGOALS))
 
-compile_test: all $(TESTOBJ)
-	@cc -g $(CFLAGS) -o $(TESTER) $(TESTOBJ) $(LIBS)
+SHORT_CMD := ./tester
+ifeq ($(SHORT),1)
+    SHORT_CMD := ./tester 2>&1 | grep -E "Page|CPU|faults|time"
+endif
 
-test: compile_test
-#	@./$(TESTER)
-	LD_PRELOAD=./libft_malloc.so ./$(TESTER)
+TIME_CMD := $(SHORT_CMD)
+ifeq ($(TIME),1)
+    TIME_CMD := /usr/bin/time -v $(SHORT_CMD)
+endif
 
-test_page: compile_test
-#	LD_PRELOAD=./libft_malloc.so /usr/bin/time -v ./$(TESTER)
-	LD_PRELOAD=./libft_malloc.so /usr/bin/time -v ./$(TESTER) 2>&1| grep -E "Page|CPU|faults|time"
-
-test_std: compile_malloc_test
-#	/usr/bin/time -v ./$(TESTER_STD)
-	/usr/bin/time -v ./$(TESTER_STD) 2>&1| grep -E "Page|CPU|faults|time"
+$(TEST_NAME): all
+	@echo "Building and running $@"
+ifeq ($(STD),1)
+	cc -g $(CFLAGS) -o tester test/$@.c
+	$(TIME_CMD)
+else
+	cc -g $(CFLAGS) -o tester test/$@.c $(LIBS) ./$(LIB_NAME)
+	LD_PRELOAD=./libft_malloc.so $(TIME_CMD)
+endif
 
 clean:
 	rm -f $(OBJ) $(TESTOBJ) libft_malloc.so

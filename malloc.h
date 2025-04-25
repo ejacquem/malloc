@@ -7,7 +7,7 @@
 struct meta_data
 {
     struct meta_data *next;
-    size_t size;
+    size_t size; // also contain free flag in last bit
 };
 
 struct malloc_data
@@ -17,6 +17,7 @@ struct malloc_data
     void *large; // pointer to the LARGE zone
     size_t data_allocated_count;
     size_t data_freed_count;
+    void *zero_allocation;
     int first;
 };
 
@@ -26,7 +27,7 @@ struct zone_data
     int is_full;
 };
 
-static struct malloc_data data = {0};
+extern struct malloc_data data;
 
 #define LOG(fmt, ...) ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__)
 #define LOGLN ft_printf("[MALLOC]\n")
@@ -77,7 +78,9 @@ void show_alloc_mem();
 size_t align_up(size_t size, size_t base);
 void *get_user_data_pointer(void *ptr);
 size_t get_block_size(void *block);
+size_t get_size(size_t size);
 struct meta_data get_block_meta_data(void *block);
+size_t get_zone_usr_data_ptr(void *zone);
 void print_define();
 
 /*

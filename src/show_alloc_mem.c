@@ -1,7 +1,4 @@
-#include "malloc.h"
 #include "../malloc.h"
-
-extern struct malloc_data data;
 
 void print_zone(size_t *sum, void *zone, size_t zone_size)
 {
@@ -12,9 +9,10 @@ void print_zone(size_t *sum, void *zone, size_t zone_size)
         block = zone + i;
         size_t block_size = get_block_size(block);
         ft_printf("%p - %p : %d bytes\n", block, block + block_size, block_size);
-
         *sum += block_size;
         
+        if (block_size == 0)
+            break;
         i += block_size;
     }
 }
@@ -31,7 +29,8 @@ void print_large(size_t *sum, void *zone)
     do
     {
         block_data = get_block_meta_data(block);
-        ft_printf("%p - %p : %d bytes\n", block, block_data.next, block_data.size);
+        size_t block_size = get_size(block_data.size);
+        ft_printf("%p - %p : %d bytes\n", block, block + block_size, block_size);
 
         *sum += block_data.size;
 
@@ -45,14 +44,14 @@ void show_alloc_mem()
 
     ft_printf("TINY : %p\n", data.tiny);
     if (data.tiny)
-        print_zone(&sum, data.tiny, TINY_ZONE);
-    ft_printf("SMALL : %p\n", data.small);
+        print_zone(&sum, get_zone_usr_data_ptr(data.tiny), TINY_ZONE);
+    ft_printf("SMALL: %p\n", data.small);
     if (data.small)
-        print_zone(&sum, data.small, SMALL_ZONE);
-    ft_printf("LARGE : %p\n", data.large);
+        print_zone(&sum, get_zone_usr_data_ptr(data.small), SMALL_ZONE);
+    ft_printf("LARGE: %p\n", data.large);
     if (data.large)
         print_large(&sum, data.large);
-    ft_printf("Total remaining: %ld bytes\n", sum);
+    ft_printf("Total: %ld bytes\n", sum);
     ft_printf("Total allocated: %ld bytes\n", data.data_allocated_count);
     ft_printf("Total freed: %ld bytes\n", data.data_freed_count);
     return;

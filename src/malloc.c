@@ -1,7 +1,6 @@
-#include "malloc.h"
 #include "../malloc.h"
 
-extern struct malloc_data data;
+struct malloc_data data = {0};
 
 void * short_mmap(size_t size)
 {
@@ -145,7 +144,11 @@ void *malloc(size_t size)
     print_define();
     void *addr;
 
-    LOG("----- Malloc called for size %ld -----", size);
+    LOG("----- Malloc called -----");
+    LOG("size: %ld", size);
+
+    if (size == 0)
+        return data.zero_allocation;
 
     if (size <= TINY_SIZE && LOG("Browse TINY"))
         addr = browse_all_zones(&data.tiny, TINY_ZONE, size);
@@ -160,6 +163,7 @@ void *malloc(size_t size)
 
 void free(void *ptr)
 {
+    LOG("Free called");
     if (ptr == NULL)
         return;
     size_t *block = ((size_t *)ptr) - 1; // step back 8 bytes
