@@ -6,32 +6,40 @@ size_t align_up(size_t size, size_t base)
     return (size + base - 1) & ~(base - 1);
 }
 
-size_t get_block_size(void *block)
+// get data for TINY or SMALL block
+size_t get_block_data(void *block)
 {
-    return *(size_t *)(block) & ~0b1111; // ignore last 4 bits
+    return *(size_t *)(block);
 }
 
-size_t get_size(size_t size)
+//transform user data size into block size for TINY and SMALL blocks
+size_t get_block_size(size_t size, size_t meta_data_size)
 {
-    return size & ~0b1111; // ignore last 4 bits
+    return align_up(meta_data_size + GET_SIZE(size), 16);
 }
 
-size_t get_zone_usr_data_ptr(void *zone)
+size_t get_block_usable_size(size_t size, size_t meta_data_size)
 {
-    return ((struct zone_data *)(zone) + 1);
+    return get_block_size(size, meta_data_size) - meta_data_size;
 }
 
-struct meta_data get_block_meta_data(void *block)
+void *get_zone_usr_data_ptr(void *zone)
 {
-    struct meta_data data;
-    data.size = ((struct meta_data *)(block))->size ;
-    data.next = ((struct meta_data *)(block))->next ;
+    return ((struct zone_data *)zone) + 1;
+}
+
+//get data for LARGE block
+struct l_meta_data get_block_meta_data(void *block)
+{
+    struct l_meta_data data;
+    data.size = ((struct l_meta_data *)(block))->size ;
+    data.next = ((struct l_meta_data *)(block))->next ;
     return data;
 }
 
 void *get_user_data_pointer(void *ptr)
 {
-    return ((struct meta_data*)ptr) + 1;
+    return ((struct l_meta_data*)ptr) + 1;
 }
 
 void print_memory_table(int size, int meta_data_size)

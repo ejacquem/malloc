@@ -28,58 +28,76 @@ int init_zone(void **zone, size_t size)
 // algorithm used for TINY and SMALL zone
 void *browse_zone(void *zone, size_t zone_size, size_t size)
 {
+    size_t new_block_size = get_block_size(size, S_META_DATA_SIZE);
+    const int zone_limit = zone_size - new_block_size; 
     void *block;
+    size_t block_data, alloc_size, block_size;
 
-    int block_count= 0;
-    for (int i = 0; i < zone_size - size;)
+    for (int i = 0; i < zone_limit;)
     {
-        block_count++;
-        // LOG("i: %d", i);
-        // LOG("block_count: %d", block_count);
         block = zone + i;
-        size_t block_size = get_block_size(block);
-        if (block_size == 0) // reached the end of the heap
+        block_data = get_block_data(block);
+        alloc_size = GET_SIZE(block_data);
+        block_size = get_block_size(block_data, S_META_DATA_SIZE);
+        // LOG("ptr: %p", block);
+        // LOG("size: %ld", size);
+        // LOG("block_data: %ld", block_data);
+        // LOG("alloc_size: %ld", alloc_size);
+        // LOG("block_size: %ld", block_size);
+        // LOG("*(size_t *)block: %ld", *(size_t *)block);
+        if (alloc_size == 0) // reached the end of the heap
         {
-            *(size_t *)(block + size) = 0; // set next block size to 0
+            *(size_t *)(block + new_block_size) = 0; // set next block size to 0
             *(size_t *)block = size; // set block size (overwrites flag)
-            return block + sizeof(size_t);
+            LOG("size aligned: %ld", new_block_size);
+            LOG("(size_t *)block: %p", (size_t *)block);
+            LOG("*(size_t *)block: %ld", *(size_t *)block);
+            return block + S_META_DATA_SIZE;
         }
-        if (block_size < size && IS_FREE(block_size)) // found a free block big enough
+        // LOG("ptr: %p", block);
+        // LOG("alloc_size: %ld", alloc_size);
+        // LOG("IS_FREE(alloc_size): %d", IS_FREE(block_data));
+        // LOG("get_block_usable_size(alloc_size, S_META_DATA_SIZE): %d", get_block_usable_size(alloc_size, S_META_DATA_SIZE));
+        if (size <= get_block_usable_size(alloc_size, S_META_DATA_SIZE) && IS_FREE(block_data)) // found a free block big enough
         {
-            LOG("---- Found free block");
-            return block + sizeof(size_t);
+            LOG(" - Found free block");
+            *(size_t *)block = size;
+            if (new_block_size < block_size) // if new block is smaller, split current block into one full and one free
+            {
+                size_t *next_block = (size_t *)(block + new_block_size); 
+                *next_block = block_size - new_block_size; // set next block size to (current - new)
+                *next_block = SET_FREE(*next_block);
+            }
+            return block + S_META_DATA_SIZE;
         }
         i += block_size;
     }
-    LOG("End of the zone reached");
+    // LOG("End of the zone reached");
     // ((struct zone_data *)(zone) - 1)->is_full = TRUE;
     return NULL;
 }
 
 void *browse_all_zones(void **zones, size_t zone_size, size_t size)
 {
+    int zone_index = 0;
     struct zone_data *zone;
     void *addr;
 
     if (!(*zones || init_zone(zones, zone_size)))
         return NULL;
-    
-    size = align_up(sizeof(size_t) + size, 16);
-    LOG("size aligned: %d", size);
 
     zone = *zones;
-    // LOG("zone: %p", zone);
-    // LOG("zone + 1: %p", zone + 1);
-    // LOG("((void *)zone) + sizeof(struct zone_data): %p", ((void *)zone) + sizeof(struct zone_data));
-    // LOG("zdata size: %d", sizeof(struct zone_data));
     while (1)
     {
         if (!zone->is_full)
         {
-            addr = browse_zone((void **)(zone + 1), zone_size - sizeof(struct zone_data), size); // + 1 to skip the zone_data
+            addr = browse_zone((void **)(zone + 1), zone_size - sizeof(struct zone_data), size);
             // LOG("allocation ptr: %p %s", addr, addr != NULL ? OK : FAIL);
             if (addr != NULL)
+            {
+                LOG("Found space in zone index %d", zone_index);
                 return addr;
+            }
         }
 
         // If full or allocation failed, move to the next zone or allocate one
@@ -89,6 +107,7 @@ void *browse_all_zones(void **zones, size_t zone_size, size_t size)
                 return LOG("New zone allocation failed"), NULL;
         }
         zone = zone->next;
+        zone_index++;
     }
     return NULL;
 }
@@ -97,15 +116,15 @@ void *browse_all_zones(void **zones, size_t zone_size, size_t size)
 void *browse_heap(void **zone, size_t size)
 {
     void *block;
-    struct meta_data *block_data;
+    struct l_meta_data *block_data;
     
-    size = align_up(sizeof(struct meta_data) + size, 16);
-    LOG("size aligned: %d", size);
-    LOG("zone: %p", zone);
+    size_t block_size = get_block_size(size, L_META_DATA_SIZE);
+    LOG("size aligned: %ld", block_size);
+    // LOG("zone: %p", zone);
     if (*zone == NULL) // if large zone is null, init its first node
     {
         LOG("Init first node");
-        *zone = short_mmap(size);
+        *zone = short_mmap(block_size);
         LOG("allocation ptr: %p %s", *zone, *zone != NULL ? OK : FAIL);
         block_data = *zone;
         block_data->size = size;
@@ -113,21 +132,24 @@ void *browse_heap(void **zone, size_t size)
         return get_user_data_pointer(block_data);
     }
     
-    LOG("Searching free space");
+    // LOG("Searching free space");
     block = *zone;
     while (1)
     {
         block_data = block;
-        if (block_data->size < size && IS_FREE(block_data->size)) // found a free block big enough
+        if (get_block_usable_size(block_data->size, L_META_DATA_SIZE) <= size && IS_FREE(block_data->size)) // found a free block big enough
+        {
+            LOG("Found some nice free space :)");
+            block_data->size = SET_NOT_FREE(block_data->size);
             return get_user_data_pointer(block_data);
+        }
         if(block_data->next == NULL) // end of large zones
             break;
         block = block_data->next;
     }
 
     LOG("Allocating a new large zone");
-    // end of large zone, need a new mmap call
-    void *ptr = short_mmap(size);
+    void *ptr = short_mmap(block_size); // end of large zone, need a new mmap call
     LOG("allocation ptr: %p %s", *zone, *zone != NULL ? OK : FAIL);
     if(ptr)
     {
@@ -158,14 +180,27 @@ void *malloc(size_t size)
         addr = browse_heap(&data.large, size);
     
     LOG("Returning pointer: %p", addr);
+    LOGLN;
     return addr;
 }
 
+void *realloc(void *ptr, size_t size)
+{
+    if (ptr == NULL)
+        return malloc(size);
+    if (size == 0)
+        return free(ptr), NULL;
+    return NULL;
+}
+
+
 void free(void *ptr)
 {
-    LOG("Free called");
     if (ptr == NULL)
-        return;
+        return LOG("Free called on NULL"), (void)0;
     size_t *block = ((size_t *)ptr) - 1; // step back 8 bytes
+    LOG("Free called on pointer %p", block);
+    if (IS_FREE(*block))
+        return LOG("Pointer already free !"), (void)0;
     *block = SET_FREE(*block);
 }

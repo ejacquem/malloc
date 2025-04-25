@@ -7,8 +7,9 @@ void print_zone(size_t *sum, void *zone, size_t zone_size)
     for (int i = 0; i < zone_size;)
     {
         block = zone + i;
-        size_t block_size = get_block_size(block);
-        ft_printf("%p - %p : %d bytes\n", block, block + block_size, block_size);
+        size_t block_data = get_block_data(block);
+        size_t block_size = GET_SIZE(block_data);
+        ft_printf("%p - %p : %ld bytes\n", block, block + block_size, block_size);
         *sum += block_size;
         
         if (block_size == 0)
@@ -20,7 +21,7 @@ void print_zone(size_t *sum, void *zone, size_t zone_size)
 void print_large(size_t *sum, void *zone)
 {
     void *block;
-    struct meta_data block_data;
+    struct l_meta_data block_data;
 
     block = zone;
     if (block == NULL)
@@ -29,10 +30,10 @@ void print_large(size_t *sum, void *zone)
     do
     {
         block_data = get_block_meta_data(block);
-        size_t block_size = get_size(block_data.size);
-        ft_printf("%p - %p : %d bytes\n", block, block + block_size, block_size);
+        size_t block_size = GET_SIZE(block_data.size);
+        ft_printf("%p - %p : %ld bytes\n", block, block + block_size, block_size);
 
-        *sum += block_data.size;
+        *sum += block_size;
 
         block = block_data.next;
     } while (block_data.next);

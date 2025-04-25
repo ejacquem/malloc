@@ -3,14 +3,13 @@
 
 int main()
 {
-    ft_printf("Hello\n");
+    // ft_printf("Hello\n");
     // a = malloc(1024);
     // ft_printf("malloc: %s\n", a == NULL ? "NULL" : "OK");
+    // a = malloc(2147483649 * 9.6);
+
     int *a;
-    a = malloc(128);
-    a = malloc(512);
     a = malloc(1024);
-    a = malloc(10000);
     free(a);
     // for (int i = 0; i < 10; i++)
     // {
