@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "../malloc.h"
 
 #define RUNS 10000
 
 int main() {
-  malloc(1);
+  ft_malloc(1);
 
   int i;
-  int **arr = malloc(RUNS * sizeof(int *));
+  int **arr = ft_malloc(RUNS * sizeof(int *));
 
   if (arr == NULL) {
     printf("Memory failed to allocate!\n");
@@ -15,7 +16,7 @@ int main() {
   }
 
   for (i = 0; i < RUNS; i++) {
-    arr[i] = malloc(sizeof(int));
+    arr[i] = ft_malloc(sizeof(int));
     if (arr[i] == NULL) {
       printf("Memory failed to allocate!\n");
       return 1;
@@ -32,10 +33,10 @@ int main() {
   }
 
   for (i = 0; i < RUNS; i++) {
-    free(arr[i]);
+    ft_free(arr[i]);
   }
   
-  free(arr);
-  printf("Memory was allocated, used, and freed!\n");	
+  ft_free(arr);
+  printf("Memory was allocated, used, and ft_freed!\n");	
   return 0;
 }

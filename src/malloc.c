@@ -1,6 +1,6 @@
 #include "../malloc.h"
 
-struct malloc_data data = {0};
+struct ft_malloc_data data = {0};
 
 void * short_mmap(size_t size)
 {
@@ -44,7 +44,7 @@ void *replace_block(void *block, size_t size)
     if (new_block_size > block_size)
         return LOG("ERROR: can't replace a block with a bigger size"), NULL;
     *(size_t *)block = size;
-    if (new_block_size < block_size) // if new block is smaller, split current block into one full and one free
+    if (new_block_size < block_size) // if new block is smaller, split current block into one full and one ft_free
     {
         size_t *next_block = (size_t *)(block + new_block_size); 
         *next_block = block_size - new_block_size; // set next block size to (current - new)
@@ -86,9 +86,9 @@ void *browse_zone(void *zone, size_t zone_size, size_t size)
         // LOG("alloc_size: %ld", alloc_size);
         // LOG("IS_FREE(alloc_size): %d", IS_FREE(block_data));
         // LOG("get_block_usable_size(alloc_size, S_META_DATA_SIZE): %d", get_block_usable_size(alloc_size, S_META_DATA_SIZE));
-        if (size <= get_block_usable_size(alloc_size, S_META_DATA_SIZE) && IS_FREE(block_data)) // found a free block big enough
+        if (size <= get_block_usable_size(alloc_size, S_META_DATA_SIZE) && IS_FREE(block_data)) // found a ft_free block big enough
         {
-            LOG(" - Found free block");
+            LOG(" - Found ft_free block");
             return replace_block(block, size);
         }
         i += block_size;
@@ -112,7 +112,7 @@ void *browse_all_zones(void **zones, size_t zone_size, size_t size)
     {
         if (!zone->is_full)
         {
-            addr = browse_zone((void **)(zone + 1), zone_size - sizeof(struct zone_data), size);
+            addr = browse_zone((void **)(zone + 1L), zone_size - sizeof(struct zone_data), size);
             // LOG("allocation ptr: %p %s", addr, addr != NULL ? OK : FAIL);
             if (addr != NULL)
             {
@@ -132,41 +132,57 @@ void *browse_all_zones(void **zones, size_t zone_size, size_t size)
     }
     return NULL;
 }
-// ZONE_DATA_SIZE
 
-void *browse_heap(void **zone, size_t size)
+void *new_large_block(size_t block_size, size_t size)
 {
-    void *block;
     struct l_meta_data *block_data;
-    
-    size_t block_size = get_block_size(size, L_META_DATA_SIZE);
-    LOG("size aligned: %ld", block_size);
-    // LOG("zone: %p", zone);
-    if (*zone == NULL) // if large zone is null, init its first node
-    {
-        LOG("Init first node");
-        *zone = short_mmap(block_size);
-        LOG("allocation ptr: %p %s", *zone, *zone != NULL ? OK : FAIL);
-        block_data = *zone;
-        block_data->size = size;
-        block_data->next = NULL;
-        return get_user_data_pointer(block_data);
-    }
+    block_data = short_mmap(block_size);
 
-    LOG("Allocating a new large zone");
-    void *ptr = short_mmap(block_size); // end of large zone, need a new mmap call
-    LOG("allocation ptr: %p %s", *zone, *zone != NULL ? OK : FAIL);
-    if(ptr)
-    {
-        block_data = block;
-        block_data->next = ptr;
-        block_data->size = size;
-        return get_user_data_pointer(block_data);
-    }
-    return NULL;
+    if (block_data == NULL)
+        return NULL;
+
+    block_data->size = size;
+    block_data->next = NULL;
+    return block_data;
 }
 
-void *malloc(size_t size)
+void add_back(void **list, void *node)
+{
+    struct l_meta_data *block = *list;
+
+    if (*list == NULL)
+    {
+        *list = node;
+        return ;
+    }
+
+    while(block->next)
+    {
+        if(block == block->next)
+            return LOG("WTF ?"), (void)0;
+        block = block->next;
+        
+        LOG("block, %p", block);
+    }
+
+    block->next = node;
+}
+
+void *ft_malloc_large(void **zone, size_t size)
+{
+    void *new_block;
+    struct l_meta_data *block = *zone;
+    size_t new_block_size = align_up(sizeof(struct l_meta_data) + size, 16);
+
+    new_block = new_large_block(new_block_size, size);
+    LOG("created new zone at: %p", new_block);
+
+    add_back(zone, new_block);
+
+    return new_block + sizeof(struct l_meta_data);
+}
+
+void *ft_malloc(size_t size)
 {
     print_define();
     void *addr;
@@ -182,30 +198,35 @@ void *malloc(size_t size)
     else if (size <= SMALL_SIZE && LOG("Browse SMALL"))
         addr = browse_all_zones(&data.small, SMALL_ZONE, size);
     else if (LOG("Browse LARGE"))
-        addr = browse_heap(&data.large, size);
+        addr = ft_malloc_large(&data.large, size);
     
     LOG("Returning pointer: %p", addr);
     LOGLN;
     return addr;
 }
 
-void *realloc(void *ptr, size_t size)
+void *ft_realloc(void *ptr, size_t size)
 {
     LOG("--- Realloc called ---");
     if (ptr == NULL)
-        return malloc(size);
+        return ft_malloc(size);
     if (size == 0)
-        return free(ptr), NULL;
+        return ft_free(ptr), NULL;
     
-    
-    void *block = ((size_t *)ptr) - 1; // step back 8 bytes
+    void *block = ((size_t *)ptr) - 1L; // step back 8 bytes
+    LOG("ptr: %p", ptr);
+    LOG("block: %p", block);
+    LOG("test");
     size_t block_data = get_block_data(block);
     size_t alloc_size = GET_SIZE(block_data);
     size_t block_size = get_block_size(block_data, S_META_DATA_SIZE);
+
+    LOG("alloc_size: %ld", alloc_size);
+    LOG("block_size: %ld", block_size);
     
-    if (alloc_size <= SMALL_SIZE)
+    if (alloc_size <= SMALL_SIZE && size <= SMALL_SIZE)
     {
-        LOG("Realloc called");
+        LOG("Realloc SMALL");
         size_t block_usable_size = get_block_usable_size(alloc_size, S_META_DATA_SIZE);
         if (block_usable_size >= size)
             return ptr;
@@ -217,31 +238,79 @@ void *realloc(void *ptr, size_t size)
             join_next_block(block);
             return replace_block(block, size);
         }
-        LOG("Can't realloc for small/tiny");
+        LOG("Can't ft_realloc for small/tiny");
     }
     else
-    LOG("Realloc LARGE");
+        LOG("Realloc LARGE");
 
-    // can't add more data, creating new pointer, copy data, free old ptr
-    void *addr = malloc(size);
+    // can't add more data, creating new pointer, copy data, ft_free old ptr
+    void *addr = ft_malloc(size);
     if (addr)
     {
-        int n = 100;
-        ft_memcpy(addr, ptr, alloc_size);
-        free(ptr);
+        ft_memcpy(addr, ptr, MIN(alloc_size, size));
+        ft_free(ptr);
+        LOG("ft_realloc OK");
         return addr;
     }
+    LOG("ft_realloc NO");
     return NULL;
 }
 
+void remove_node(struct l_meta_data **head, void *ptr) {
+    if (!head || !*head) return;
 
-void free(void *ptr)
+    struct l_meta_data *curr = *head;
+    struct l_meta_data *prev = NULL;
+
+    while (curr) {
+        if (curr == ptr) {
+            if (prev)
+            {
+                LOG("Removing node: %p", curr);
+                prev->next = curr->next;
+            }
+            else
+            {
+                LOG("Removing first node: %p", curr);
+                *head = curr->next;
+                LOG("new first: %p", *head);
+            }
+            return;
+        }
+        prev = curr;
+        curr = curr->next;
+    }
+}
+
+void print_list(struct l_meta_data *list)
+{
+    int i = 0;
+
+    while(list)
+    {
+        LOG(" - - - - - - - -node %d: %p", i++, list);
+        list = list->next;
+    }
+}
+
+void ft_free(void *ptr)
 {
     if (ptr == NULL)
         return LOG("Free called on NULL"), (void)0;
-    size_t *block = ((size_t *)ptr) - 1; // step back 8 bytes
+    size_t *block = ((size_t *)ptr) - 1L; // step back 8 bytes
     LOG("Free called on pointer %p", block);
     if (IS_FREE(*block))
-        return LOG("Pointer already free !"), (void)0;
-    *block = SET_FREE(*block);
+        return LOG("Pointer already ft_free !"), (void)0;
+
+    if (GET_SIZE(*block) > SMALL_SIZE)
+    {
+        struct l_meta_data *large_block = ((struct l_meta_data *)ptr) - 1L;
+        remove_node((void *)&data.large, large_block);
+        if (munmap(large_block, align_up(sizeof(struct l_meta_data) + GET_SIZE(*block), 16)) == 0)
+            LOG("munmap succesful");
+        else
+            LOG("munmap failed: %s", strerror(errno));
+    }
+    else
+        *block = SET_FREE(*block);
 }

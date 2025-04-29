@@ -23,7 +23,7 @@ $(LIB_NAME): $(OBJ)
 	@cc $(CFLAGS) -fPIC -c $< -o $@
 
 sym:
-	ln -sf $(LIB_NAME) libft_malloc.so
+	ln -sf $(LIB_NAME) libmalloc.so
 
 # TESTER -----------------------------------
 

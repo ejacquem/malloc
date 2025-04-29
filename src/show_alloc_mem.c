@@ -54,6 +54,6 @@ void show_alloc_mem()
         print_large(&sum, data.large);
     ft_printf("Total: %ld bytes\n", sum);
     ft_printf("Total allocated: %ld bytes\n", data.data_allocated_count);
-    ft_printf("Total freed: %ld bytes\n", data.data_freed_count);
+    ft_printf("Total ft_freed: %ld bytes\n", data.data_ft_freed_count);
     return;
 }

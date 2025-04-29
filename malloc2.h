@@ -6,8 +6,8 @@
 
 struct meta_data
 {
-    size_t size;            // total size of the block (meta + usable) - contains free flag in first bit 
-    size_t user_size;       // size given to malloc
+    size_t size;            // total size of the block (meta + usable) - contains ft_free flag in first bit 
+    size_t user_size;       // size given to ft_malloc
     struct meta_data *next;
 }typedef meta_data_t;
 
@@ -18,16 +18,16 @@ struct block_info
     size_t user_size;
     size_t usable_size;
     void* user_ptr;
-    char isfree;
+    char isft_free;
 }typedef block_info_t;
 
-struct malloc_data
+struct ft_malloc_data
 {
     void *tiny;  // pointer to the TINY zone
     void *small; // pointer to the SMALL zone
     void *large; // pointer to the LARGE zone
     size_t data_allocated_count;
-    size_t data_freed_count;
+    size_t data_ft_freed_count;
     void *zero_allocation;
     int first;
 };
@@ -38,7 +38,7 @@ struct zone_data
     int is_full;
 };
 
-extern struct malloc_data data;
+extern struct ft_malloc_data data;
 
 #define DEBUG
 
@@ -88,9 +88,9 @@ SMALL|  512|        528|     52800|        53248|      13
 #define SMALL_ZONE CEIL(ZONE_DATA_SIZE + (SMALL_BLOCK_SIZE * 100), PAGE_SIZE)
 #define SMALL_PAGE_NB SMALL_ZONE / PAGE_SIZE
 
-void free(void *ptr);
-void *malloc(size_t size);
-void *realloc(void *ptr, size_t size);
+void ft_free(void *ptr);
+void *ft_malloc(size_t size);
+void *ft_realloc(void *ptr, size_t size);
 void show_alloc_mem();
 
 size_t align_up(size_t size, size_t base);
@@ -103,7 +103,7 @@ meta data can be 2 case :
 [meta_data:       [size]][user_data]
 [meta_data: [next][size]][user_data]
 
-and the free flag is the last bits of size
+and the ft_free flag is the last bits of size
 */
 
 #endif

@@ -1,7 +1,7 @@
 # CFLAGS = -Wno-implicit-function-declaration
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror
+CFLAGS			= -g -Wall -Wextra -Werror
 
 SRC = memset bzero memcpy memmove memchr memcmp calloc \
 	strdup substr strjoin strtrim split itoa strmapi \

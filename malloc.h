@@ -2,12 +2,13 @@
  #define MALLOC_H
 
 #include <sys/mman.h>
+#include <errno.h>
 #include "printf/ft_printf.h"
 
 struct s_meta_data
 {
     // size is the user allocated size
-    // the first bit is used as a flag for free
+    // the first bit is used as a flag for ft_free
     // needs to be at the end of the l_meta_data
     size_t size;
 };
@@ -17,18 +18,18 @@ struct l_meta_data
     struct l_meta_data *next;
 
     // size is the user allocated size
-    // the first bit is used as a flag for free
+    // the first bit is used as a flag for ft_free
     // needs to be at the end of the l_meta_data
     size_t size;
 };
 
-struct malloc_data
+struct ft_malloc_data
 {
     void *tiny;  // pointer to the TINY zone
     void *small; // pointer to the SMALL zone
     void *large; // pointer to the LARGE zone
     size_t data_allocated_count;
-    size_t data_freed_count;
+    size_t data_ft_freed_count;
     void *zero_allocation;
     int first;
 };
@@ -39,9 +40,9 @@ struct zone_data
     int is_full;
 };
 
-extern struct malloc_data data;
+extern struct ft_malloc_data data;
 
-#define DEBUG
+// #define DEBUG
 
 #ifdef DEBUG
     #define LOG(fmt, ...) ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__)
@@ -59,6 +60,7 @@ extern struct malloc_data data;
 
 
 #define CEIL(x, base) ((x + base - 1) & ~(base - 1))
+#define MIN(a, b) (a < b ? a : b)
 
 // flag manipulation
 
@@ -91,9 +93,9 @@ SMALL|  512|        528|     52800|        53248|      13
 #define SMALL_ZONE CEIL(ZONE_DATA_SIZE + (SMALL_BLOCK_SIZE * 100), PAGE_SIZE)
 #define SMALL_PAGE_NB SMALL_ZONE / PAGE_SIZE
 
-void free(void *ptr);
-void *malloc(size_t size);
-void *realloc(void *ptr, size_t size);
+void ft_free(void *ptr);
+void *ft_malloc(size_t size);
+void *ft_realloc(void *ptr, size_t size);
 void show_alloc_mem();
 
 size_t align_up(size_t size, size_t base);
@@ -112,7 +114,7 @@ meta data can be 2 case :
 [meta_data:       [size]][user_data]
 [meta_data: [next][size]][user_data]
 
-and the free flag is the last bits of size
+and the ft_free flag is the last bits of size
 */
 
 #endif

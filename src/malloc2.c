@@ -10,7 +10,7 @@ void * map(size_t size)
     return addr;
 }
 
-void free(void *ptr);
+void ft_free(void *ptr);
 
 block_info_t get_block_info(meta_data_t *block)
 {
@@ -21,11 +21,11 @@ block_info_t get_block_info(meta_data_t *block)
     info.block_size = GET_SIZE(data.size);
     info.usable_size = info.block_size - sizeof(meta_data_t);
     info.user_ptr = block + 1;
-    info.isfree = IS_FREE(data.size);
+    info.isft_free = IS_FREE(data.size);
     return info;
 }
 
-// asign a new user_size, remove free flag, and return the user pointer to that block
+// asign a new user_size, remove ft_free flag, and return the user pointer to that block
 void *reuse_block(meta_data_t *block, size_t size)
 {
     block->user_size = size;
@@ -47,8 +47,8 @@ void *browse_blocks(const void *zone, size_t zone_size, size_t size)
     while (1)
     {
         info = get_block_info(block);
-        // return block if free and enough space
-        if (info.isfree && info.usable_size >= size)
+        // return block if ft_free and enough space
+        if (info.isft_free && info.usable_size >= size)
             reuse_block(block, size);
 
         // allocate new memory if null
@@ -76,7 +76,7 @@ void *browse_blocks(const void *zone, size_t zone_size, size_t size)
     return NULL;
 }
 
-void *malloc(size_t size)
+void *ft_malloc(size_t size)
 {
 
     print_define();
@@ -100,4 +100,4 @@ void *malloc(size_t size)
     return addr;
 }
 
-void *realloc(void *ptr, size_t size);
+void *ft_realloc(void *ptr, size_t size);

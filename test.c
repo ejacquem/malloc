@@ -24,34 +24,34 @@ int main()
     // for (int i = 0; i < 10; i++)
     // {
     //     prev = a;
-    //     a = malloc(41);
+    //     a = ft_malloc(41);
     //     printf("a : %p\n", a);
     //     printf("diff : %ld\n", (a - prev));
     // }
     int n = 1000000;
-    a = malloc(n);
-    b = malloc(n);
+    a = ft_malloc(n);
+    b = ft_malloc(n);
     printf("a : %p\n", a);
     printf("b : %p\n", b);
     printf("diff : %ld\n", (b - a));
-    free(a);
-    free(b);
+    ft_free(a);
+    ft_free(b);
 
-    a = malloc(n);
+    a = ft_malloc(n);
     printf("ptr : %p\n", (size_t *)(a));
     printf("ptr : %p\n", (size_t *)(a) - 1);
     printf("*ptr : %ld\n", *((size_t *)(a) - 1));
     char value = *((size_t *)(a) - 1);
     printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
-    free(a);
+    ft_free(a);
     printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
-    a = malloc(n);
+    a = ft_malloc(n);
     printf("ptr : %p\n", (size_t *)(a));
     printf("ptr : %p\n", (size_t *)(a) - 1);
     printf("*ptr : %ld\n", *((size_t *)(a) - 1));
     value = *((size_t *)(a) - 1);
     printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
-    free(a);
+    ft_free(a);
     printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
     // printf("*ptr : %b\n", *((size_t *)(a) - 1));
 }

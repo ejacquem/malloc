@@ -84,12 +84,12 @@ void print_define()
     LOG("SMALL_ZONE: %d bytes", SMALL_ZONE);
     LOG("SMALL_PAGE_NB: %d pages", SMALL_PAGE_NB);
     LOG("Min block number: %d blocks", SMALL_ZONE / SMALL_BLOCK_SIZE);
-    // LOGLN;
-    // LOG("data.tiny: %d", data.tiny);
-    // LOG("data.small: %d", data.small);
-    // LOG("data.large: %d", data.large);
-    // LOG("data.data_allocated_count: %d", data.data_allocated_count);
-    // LOG("data.data_freed_count: %d", data.data_freed_count);
-    // LOG("data.first: %d", data.first);
+    LOGLN;
+    LOG("data.tiny: %d", data.tiny);
+    LOG("data.small: %d", data.small);
+    LOG("data.large: %d", data.large);
+    LOG("data.data_allocated_count: %d", data.data_allocated_count);
+    LOG("data.data_ft_freed_count: %d", data.data_ft_freed_count);
+    LOG("data.first: %d", data.first);
     LOGLN;
 }
