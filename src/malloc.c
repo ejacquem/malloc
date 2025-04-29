@@ -149,31 +149,8 @@ void *browse_heap(void **zone, size_t size)
         LOG("allocation ptr: %p %s", *zone, *zone != NULL ? OK : FAIL);
         block_data = *zone;
         block_data->size = size;
-        block_data->next = 0;
+        block_data->next = NULL;
         return get_user_data_pointer(block_data);
-    }
-
-    LOG("Searching free space");
-    block = *zone;
-    while (1)
-    {
-        block_data = block;
-        // LOG("Test1 --------");
-        // LOG("block_data->size, %ld", GET_SIZE(block_data->size));
-        // LOG("IS_FREE(block_data->size), %d", IS_FREE(block_data->size));
-        // LOG("size, %ld", size);
-        // LOG("usable data, %ld", get_block_usable_size(block_data->size, L_META_DATA_SIZE));
-        // LOG("block_data->next, %p", block_data->next);
-        if (size <= get_block_usable_size(block_data->size, L_META_DATA_SIZE) && IS_FREE(block_data->size)) // found a free block big enough
-        {
-            LOG("Found some nice free space :)");
-            block_data->size = SET_NOT_FREE(block_data->size);
-            return get_user_data_pointer(block_data);
-        }
-        // LOG("Test2");
-        if(block_data->next == NULL) // end of large zones
-            break;
-        block = block_data->next;
     }
 
     LOG("Allocating a new large zone");
