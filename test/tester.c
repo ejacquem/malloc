@@ -4,27 +4,27 @@
 int main()
 {
     // ft_printf("Hello\n");
-    // a = ft_malloc(1024);
-    // ft_printf("ft_malloc: %s\n", a == NULL ? "NULL" : "OK");
-    // a = ft_malloc(2147483649 * 9.6);
+    // a = malloc(1024);
+    // ft_printf("malloc: %s\n", a == NULL ? "NULL" : "OK");
+    // a = malloc(2147483649 * 9.6);
 
     int *a;
-    a = ft_malloc(1024);
-    ft_free(a);
-    a = ft_malloc(1024);
-    ft_free(a);
-    a = ft_malloc(1024);
-    ft_free(a);
-    a = ft_malloc(1024);
-    ft_free(a);
+    a = malloc(1024);
+    free(a);
+    a = malloc(1024);
+    free(a);
+    a = malloc(1024);
+    free(a);
+    a = malloc(1024);
+    free(a);
 
-    a = ft_malloc(1024);
-    a = ft_malloc(1024);
-    a = ft_malloc(1024);
+    a = malloc(1024);
+    a = malloc(1024);
+    a = malloc(1024);
     // for (int i = 0; i < 10; i++)
     // {
-    //     a = ft_malloc(1);
-    //     ft_printf("ft_malloc: %s\n", a == NULL ? "NULL" : "OK");
+    //     a = malloc(1);
+    //     ft_printf("malloc: %s\n", a == NULL ? "NULL" : "OK");
     // }
     // ft_printf("Hello\n");
 

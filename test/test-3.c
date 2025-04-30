@@ -12,8 +12,8 @@ void dummy() { return; }
 
 void *reduce(void *ptr, int size) {
   if (size > STOP_MALLOC_SIZE) {
-    void *ptr1 = ft_realloc(ptr, size / 2);
-    void *ptr2 = ft_malloc(size / 2);
+    void *ptr1 = realloc(ptr, size / 2);
+    void *ptr2 = malloc(size / 2);
 
     if (ptr1 == NULL || ptr2 == NULL) {
       printf("Memory failed to allocate!\n");
@@ -32,11 +32,11 @@ void *reduce(void *ptr, int size) {
     }
 
     void *old_ptr1 = ptr1;
-    ptr1 = ft_realloc(ptr1, size);
-    ft_free(ptr2);
+    ptr1 = realloc(ptr1, size);
+    free(ptr2);
 
     if (*((int *)ptr1) != size / 2) {
-      printf("Memory failed to contain correct data after ft_realloc()!\n");
+      printf("Memory failed to contain correct data after realloc()!\n");
       printf("Expected %i found %i (old %i)\n", (size/2), *((int *)ptr1), *((int *)old_ptr1));
       dummy();
       exit(3);
@@ -51,18 +51,18 @@ void *reduce(void *ptr, int size) {
 }
 
 int main() {
-  ft_malloc(1);
+  malloc(1);
 	
   int size = START_MALLOC_SIZE;
   while (size > STOP_MALLOC_SIZE)	{
-    void *ptr = ft_malloc(size);
+    void *ptr = malloc(size);
     printf("ptr: %p\n", ptr);fflush(stdout);
     ptr = reduce(ptr, size / 2);
-    ft_free(ptr);
+    free(ptr);
 		
     size /= 2;
   }
 
-  printf("Memory was allocated, used, and ft_freed!\n");	
+  printf("Memory was allocated, used, and freed!\n");	
   return 0;
 }

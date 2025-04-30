@@ -42,6 +42,17 @@ void *get_user_data_pointer(void *ptr)
     return ((struct l_meta_data*)ptr) + 1;
 }
 
+void print_list(struct l_meta_data *list)
+{
+    int i = 0;
+
+    while(list)
+    {
+        LOG(" - node %d: %p", i++, list);
+        list = list->next;
+    }
+}
+
 void print_memory_table(int size, int meta_data_size)
 {
     int block_size, min_zone_size, zone_size, block_nb, page_nb;
@@ -89,7 +100,7 @@ void print_define()
     LOG("data.small: %d", data.small);
     LOG("data.large: %d", data.large);
     LOG("data.data_allocated_count: %d", data.data_allocated_count);
-    LOG("data.data_ft_freed_count: %d", data.data_ft_freed_count);
+    LOG("data.data_freed_count: %d", data.data_freed_count);
     LOG("data.first: %d", data.first);
     LOGLN;
 }

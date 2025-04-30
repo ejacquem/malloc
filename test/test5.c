@@ -17,7 +17,7 @@ int     main()
     alignment = 2 * sizeof(size_t);
     while (i <= 100)
     {
-        addr = (char*)ft_malloc(i);
+        addr = (char*)malloc(i);
         if (addr == NULL)
         {
             print("Failed to allocate memory\n");
@@ -25,10 +25,10 @@ int     main()
         }
         if ((((unsigned long) (addr)) % alignment) != 0)
         {
-            print("ft_malloc returned a non aligned boundary\n");
+            print("malloc returned a non aligned boundary\n");
             exit(1);
         }
         i++;
-        ft_free(addr);
+        free(addr);
     }
 }

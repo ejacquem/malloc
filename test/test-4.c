@@ -10,12 +10,12 @@
 
 int main()
 {
-    ft_malloc(1);
+    malloc(1);
 
     int i;
-    void *ft_realloc_ptr = NULL;
-    void **dictionary = ft_malloc(TOTAL_ALLOCS * sizeof(void *));
-    int *dictionary_elem_size = ft_malloc(TOTAL_ALLOCS * sizeof(int));
+    void *realloc_ptr = NULL;
+    void **dictionary = malloc(TOTAL_ALLOCS * sizeof(void *));
+    int *dictionary_elem_size = malloc(TOTAL_ALLOCS * sizeof(int));
     int dictionary_ct = 0;
     int data_written = 0;
 
@@ -24,15 +24,15 @@ int main()
         int size = (rand() % (MAX_ALLOC_SIZE - MIN_ALLOC_SIZE + 1)) + MIN_ALLOC_SIZE;
         void *ptr;
 
-        if (ft_realloc_ptr == NULL)
+        if (realloc_ptr == NULL)
         {
-            ptr = ft_malloc(size);
+            ptr = malloc(size);
             data_written = 0;
         }
         else
         {
-            ptr = ft_realloc(ft_realloc_ptr, size);
-            ft_realloc_ptr = NULL;
+            ptr = realloc(realloc_ptr, size);
+            realloc_ptr = NULL;
         }
 
         if (ptr == NULL)
@@ -43,7 +43,7 @@ int main()
 
         if (rand() % 100 < CHANCE_OF_FREE)
         {
-            ft_free(ptr);
+            free(ptr);
         }
         else
         {
@@ -55,7 +55,7 @@ int main()
 
             if (rand() % 100 < CHANCE_OF_REALLOC)
             {
-                ft_realloc_ptr = ptr;
+                realloc_ptr = ptr;
             }
             else
             {
@@ -100,9 +100,9 @@ int main()
             memory_check++;
         }
 
-        ft_free(dictionary[i]);
+        free(dictionary[i]);
     }
 
-    printf("Memory was allocated and ft_freed!\n");
+    printf("Memory was allocated and freed!\n");
     return 0;
 }

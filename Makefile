@@ -4,7 +4,7 @@ LIBS = $(PRINTF)
 
 CFLAGS = -g #-Wall -Werror -Wextra
 
-SRC = src/malloc.c src/utils.c src/show_alloc_mem.c
+SRC = src/malloc.c src/free.c src/realloc.c src/utils.c src/show_alloc_mem.c
 
 OBJ = $(SRC:.c=.o)
 TESTOBJ = $(TEST:.c=.o)
@@ -23,7 +23,7 @@ $(LIB_NAME): $(OBJ)
 	@cc $(CFLAGS) -fPIC -c $< -o $@
 
 sym:
-	ln -sf $(LIB_NAME) libmalloc.so
+	ln -sf $(LIB_NAME) libft_malloc.so
 
 # TESTER -----------------------------------
 

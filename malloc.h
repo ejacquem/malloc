@@ -9,7 +9,7 @@
 struct s_meta_data
 {
     // size is the user allocated size
-    // the first bit is used as a flag for ft_free
+    // the first bit is used as a flag for free
     // needs to be at the end of the l_meta_data
     size_t size;
 };
@@ -19,19 +19,19 @@ struct l_meta_data
     struct l_meta_data *next;
 
     // size is the user allocated size
-    // the first bit is used as a flag for ft_free
+    // the first bit is used as a flag for free
     // needs to be at the end of the l_meta_data
     size_t size;
 };
 
-struct ft_malloc_data
+struct malloc_data
 {
     void *tiny;  // pointer to the TINY zone
     void *small; // pointer to the SMALL zone
     void *large; // pointer to the LARGE zone
     struct l_meta_data *last_large; // pointer to the LARGE zone
     size_t data_allocated_count;
-    size_t data_ft_freed_count;
+    size_t data_freed_count;
     void *zero_allocation;
     int first;
 };
@@ -43,7 +43,7 @@ struct zone_data
     char is_full; // tells if the zone can't have more blocks. but it can be full and have free space
 };
 
-extern struct ft_malloc_data data;
+extern struct malloc_data data;
 
 // #define DEBUG
 
@@ -80,7 +80,7 @@ SMALL|  512|        528|     52800|        53248|      13
 */
 
 #define TINY_SIZE 128
-#define SMALL_SIZE 512
+#define SMALL_SIZE 1024
 #define S_META_DATA_SIZE sizeof(struct s_meta_data)
 #define L_META_DATA_SIZE sizeof(struct l_meta_data)
 #define PAGE_SIZE sysconf(_SC_PAGE_SIZE)
@@ -96,10 +96,11 @@ SMALL|  512|        528|     52800|        53248|      13
 #define SMALL_ZONE CEIL(ZONE_DATA_SIZE + (SMALL_BLOCK_SIZE * 100), PAGE_SIZE)
 #define SMALL_PAGE_NB SMALL_ZONE / PAGE_SIZE
 
-void ft_free(void *ptr);
-void *ft_malloc(size_t size);
-void *ft_realloc(void *ptr, size_t size);
+void free(void *ptr);
+void *malloc(size_t size);
+void *realloc(void *ptr, size_t size);
 void show_alloc_mem();
+void *replace_block(void *block, size_t size);
 
 size_t align_up(size_t size, size_t base);
 void *get_user_data_pointer(void *ptr);
@@ -117,7 +118,7 @@ meta data can be 2 case :
 [meta_data:       [size]][user_data]
 [meta_data: [next][size]][user_data]
 
-and the ft_free flag is the last bits of size
+and the free flag is the last bits of size
 */
 
 #endif

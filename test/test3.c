@@ -15,7 +15,7 @@ int     main()
     char *addr2;
     char *addr3;
 
-    addr1 = (char*)ft_malloc(16*M);
+    addr1 = (char*)malloc(16*M);
     if (addr1 == NULL)
     {
         print("Failed to allocate memory\n");
@@ -23,16 +23,16 @@ int     main()
     }
     strcpy(addr1, "Hello world!\n");
     print(addr1);
-    addr2 = (char*)ft_malloc(16*M);
+    addr2 = (char*)malloc(16*M);
     if (addr2 == NULL)
     {
         print("Failed to allocate memory\n");
         exit(1);
     }
-    addr3 = (char*)ft_realloc(addr1, 128*M);
+    addr3 = (char*)realloc(addr1, 128*M);
     if (addr3 == NULL)
     {
-        print("Failed to ft_reallocate memory\n");
+        print("Failed to reallocate memory\n");
         exit(1);
     }
     addr3[127*M] = 42;

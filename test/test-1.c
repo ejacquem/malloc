@@ -5,10 +5,10 @@
 #define RUNS 10000
 
 int main() {
-  ft_malloc(1);
+  malloc(1);
 
   int i;
-  int **arr = ft_malloc(RUNS * sizeof(int *));
+  int **arr = malloc(RUNS * sizeof(int *));
 
   if (arr == NULL) {
     printf("Memory failed to allocate!\n");
@@ -16,7 +16,7 @@ int main() {
   }
 
   for (i = 0; i < RUNS; i++) {
-    arr[i] = ft_malloc(sizeof(int));
+    arr[i] = malloc(sizeof(int));
     if (arr[i] == NULL) {
       printf("Memory failed to allocate!\n");
       return 1;
@@ -33,10 +33,10 @@ int main() {
   }
 
   for (i = 0; i < RUNS; i++) {
-    ft_free(arr[i]);
+    free(arr[i]);
   }
   
-  ft_free(arr);
-  printf("Memory was allocated, used, and ft_freed!\n");	
+  free(arr);
+  printf("Memory was allocated, used, and freed!\n");	
   return 0;
 }

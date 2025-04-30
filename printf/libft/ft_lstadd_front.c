@@ -43,7 +43,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	if (lst && del)
 	{
 		del(lst->content);
-		ft_free(lst);
+		free(lst);
 	}
 }
 
@@ -53,7 +53,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	{
 		ft_lstclear(&((*lst)->next), del);
 		del((*lst)->content);
-		ft_free(*lst);
+		free(*lst);
 		*lst = (NULL);
 	}
 }
