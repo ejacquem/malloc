@@ -14,7 +14,7 @@
 
 int main()
 {
-    void *a, *b;
+    // void *a, *b;
     // void *prev;
 
     // printf("double : %ld\n", sizeof(double));
@@ -28,30 +28,32 @@ int main()
     //     printf("a : %p\n", a);
     //     printf("diff : %ld\n", (a - prev));
     // }
-    int n = 1000000;
-    a = ft_malloc(n);
-    b = ft_malloc(n);
-    printf("a : %p\n", a);
-    printf("b : %p\n", b);
-    printf("diff : %ld\n", (b - a));
-    ft_free(a);
-    ft_free(b);
 
-    a = ft_malloc(n);
-    printf("ptr : %p\n", (size_t *)(a));
-    printf("ptr : %p\n", (size_t *)(a) - 1);
-    printf("*ptr : %ld\n", *((size_t *)(a) - 1));
-    char value = *((size_t *)(a) - 1);
-    printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
-    ft_free(a);
-    printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
-    a = ft_malloc(n);
-    printf("ptr : %p\n", (size_t *)(a));
-    printf("ptr : %p\n", (size_t *)(a) - 1);
-    printf("*ptr : %ld\n", *((size_t *)(a) - 1));
-    value = *((size_t *)(a) - 1);
-    printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
-    ft_free(a);
-    printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
+    // int n = 1000000;
+    // a = ft_malloc(n);
+    // b = ft_malloc(n);
+    // printf("a : %p\n", a);
+    // printf("b : %p\n", b);
+    // printf("diff : %ld\n", (b - a));
+    // ft_free(a);
+    // ft_free(b);
+
+    // a = ft_malloc(n);
+    // printf("ptr : %p\n", (size_t *)(a));
+    // printf("ptr : %p\n", (size_t *)(a) - 1);
+    // printf("*ptr : %ld\n", *((size_t *)(a) - 1));
+    // char value = *((size_t *)(a) - 1);
+    // printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
+    // ft_free(a);
+    // printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
+    // a = ft_malloc(n);
+    // printf("ptr : %p\n", (size_t *)(a));
+    // printf("ptr : %p\n", (size_t *)(a) - 1);
+    // printf("*ptr : %ld\n", *((size_t *)(a) - 1));
+    // value = *((size_t *)(a) - 1);
+    // printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
+    // ft_free(a);
+    // printf(BYTE_TO_BINARY_PATTERN"\n", BYTE_TO_BINARY(value));
+
     // printf("*ptr : %b\n", *((size_t *)(a) - 1));
 }

@@ -53,10 +53,10 @@ clean:
 	rm -f $(OBJ) $(TESTOBJ) libft_malloc.so
 
 fclean: clean
-	rm -f $(LIB_NAME) $(TESTER)
+	rm -f $(LIB_NAME) tester
 
 deepclean: fclean
 	make fclean -C printf
-	rm -f $(LIB_NAME) $(TESTER)
+	rm -f $(LIB_NAME) tester
 
 re: fclean all

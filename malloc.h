@@ -3,6 +3,7 @@
 
 #include <sys/mman.h>
 #include <errno.h>
+#include <string.h>
 #include "printf/ft_printf.h"
 
 struct s_meta_data
@@ -28,6 +29,7 @@ struct ft_malloc_data
     void *tiny;  // pointer to the TINY zone
     void *small; // pointer to the SMALL zone
     void *large; // pointer to the LARGE zone
+    struct l_meta_data *last_large; // pointer to the LARGE zone
     size_t data_allocated_count;
     size_t data_ft_freed_count;
     void *zero_allocation;
@@ -37,7 +39,8 @@ struct ft_malloc_data
 struct zone_data
 {
     struct zone_data *next;
-    int is_full;
+    size_t alloc_count;
+    char is_full; // tells if the zone can't have more blocks. but it can be full and have free space
 };
 
 extern struct ft_malloc_data data;
