@@ -19,7 +19,7 @@ int init_zone(void **zone, size_t size)
     if (*zone)
     {
         ((struct zone_data *)(*zone))->next = NULL;
-        ((struct zone_data *)(*zone))->is_full = FALSE;
+        // ((struct zone_data *)(*zone))->is_full = FALSE;
     }
     LOG("init state: %s", *zone != NULL ? OK : FAIL);
     return *zone != NULL;
@@ -45,6 +45,8 @@ void *replace_block(void *block, size_t size)
         size_t *next_block = (size_t *)(block + new_block_size); 
         *next_block = block_size - new_block_size - S_META_DATA_SIZE; // set next block size to (current - new)
         *next_block = SET_FREE(*next_block);
+        // if (zone != NULL)
+        //     zone->is_full = FALSE;
     }
     // LOG("returning pointer: %p", block + S_META_DATA_SIZE);
     // LOG("block_user_size: %ld", GET_SIZE(get_block_data(block)));
@@ -81,7 +83,7 @@ void *browse_zone(struct zone_data *zone, size_t zone_size, size_t size)
         i += block_size;
     }
     LOG("End of the zone reached");
-    zone->is_full = TRUE;
+    // zone->is_full = TRUE;
     return NULL;
 }
 
@@ -97,16 +99,16 @@ void *browse_all_zones(void **zones, size_t zone_size, size_t size)
     zone = *zones;
     while (1)
     {
-        if (!zone->is_full)
+        // if (!zone->is_full)
+        // {
+        addr = browse_zone(zone, zone_size - sizeof(struct zone_data), size);
+        // LOG("allocation ptr: %p %s", addr, addr != NULL ? OK : FAIL);
+        if (addr != NULL)
         {
-            addr = browse_zone(zone, zone_size - sizeof(struct zone_data), size);
-            // LOG("allocation ptr: %p %s", addr, addr != NULL ? OK : FAIL);
-            if (addr != NULL)
-            {
-                LOG("Found space in zone index %d", zone_index);
-                return addr;
-            }
+            LOG("Found space in zone index %d", zone_index);
+            return addr;
         }
+        // }
 
         // If full or can't allocate, move to the next zone or allocate one
         if (zone->next == NULL)

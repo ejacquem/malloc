@@ -40,12 +40,12 @@ struct zone_data
 {
     struct zone_data *next;
     size_t alloc_count;
-    char is_full; // tells if the zone can't have more blocks. but it can be full and have free space
+    // char is_full; // tells if the zone can't have more blocks. but it can be full and have free space
 };
 
 extern struct malloc_data data;
 
-// #define DEBUG
+#define DEBUG
 
 #ifdef DEBUG
     #define LOG(fmt, ...) ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__)
@@ -101,6 +101,10 @@ void *malloc(size_t size);
 void *realloc(void *ptr, size_t size);
 void show_alloc_mem();
 void *replace_block(void *block, size_t size);
+void join_next_block(void *block);
+void defragment_memory(void *block);
+struct zone_data *get_block_zone(struct zone_data *list, size_t zone_size, void *ptr);
+
 
 size_t align_up(size_t size, size_t base);
 void *get_user_data_pointer(void *ptr);

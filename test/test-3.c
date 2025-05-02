@@ -4,8 +4,10 @@
 
 // #define START_MALLOC_SIZE 1024*1024*128
 // #define STOP_MALLOC_SIZE  1024
+// #define STOP_MALLOC_SIZE  64
 
-#define START_MALLOC_SIZE 1024*1024
+// #define START_MALLOC_SIZE 1024*1024
+#define START_MALLOC_SIZE 1024
 #define STOP_MALLOC_SIZE  64
 
 void dummy() { return; }

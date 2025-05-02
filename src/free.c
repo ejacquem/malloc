@@ -1,16 +1,5 @@
 #include "../malloc.h"
 
-void *get_block_zone(struct zone_data *list, size_t zone_size, void *ptr)
-{
-    while(list)
-    {
-        if (ptr > (void *)list && ptr < (void *)(list + zone_size))
-            return list;
-        list = list->next;
-    }
-    return NULL;
-}
-
 size_t empty_zone_count(struct zone_data *list)
 {
     size_t count = 0;
@@ -90,11 +79,12 @@ void free_small(void *ptr, void **zone_list, size_t zone_size)
     *block = SET_FREE(*block);
     struct zone_data *zone = get_block_zone(*zone_list, zone_size, block);
     zone->alloc_count--;
-    zone->is_full = FALSE;
+    // zone->is_full = FALSE;
     if (zone->alloc_count == 0 && empty_zone_count(*zone_list) >= 2UL) // if zone is empty and at least one other empty zone exists
+    // if (zone->alloc_count == 0 && (void *)zone != *zone_list) // if its not the first zone
     {
         LOG(" ------------------------------------------ Removing a small zone");
-        LOG("empty_zone_count(*zone_list): %ld", empty_zone_count(*zone_list));
+        // LOG("empty_zone_count(*zone_list): %ld", empty_zone_count(*zone_list));
         remove_zone_node((struct zone_data **)zone_list, zone);
         if (munmap(zone, zone_size) == 0)
             LOG("munmap succesful");

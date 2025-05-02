@@ -42,6 +42,56 @@ void *get_user_data_pointer(void *ptr)
     return ((struct l_meta_data*)ptr) + 1;
 }
 
+struct zone_data *get_block_zone(struct zone_data *list, size_t zone_size, void *ptr)
+{
+    while(list)
+    {
+        if (ptr > (void *)list && ptr < (void *)(list + zone_size))
+            return list;
+        list = list->next;
+    }
+    return NULL;
+}
+
+// join the next block to the current
+// modify current block size
+void join_next_block(void *block)
+{
+    size_t block_data = get_block_data(block);
+    size_t block_size = get_block_size(block_data, S_META_DATA_SIZE);
+    size_t next_block_data = get_block_data(block + block_size);
+    size_t next_block_size = get_block_size(next_block_data, S_META_DATA_SIZE);
+    LOG("JOIN next block");
+    // LOG("block_data, %ld", block_data);
+    // LOG("block_size, %ld", block_size);
+    // LOG("next_block_data, %ld", next_block_data);
+    // LOG("next_block_size, %ld", next_block_size);
+    char is_free = IS_FREE(block_data);
+    *(size_t *)block = (block_size - S_META_DATA_SIZE) + next_block_size;
+    *(size_t *)block = is_free ? SET_FREE(*(size_t *)block) : SET_NOT_FREE(*(size_t *)block);
+}
+
+// append all contiguous free blocks after the current block to the current block
+void defragment_memory(void *block)
+{
+    LOG("Defragment");
+    size_t block_data = get_block_data(block);
+    size_t block_size = get_block_size(block_data, S_META_DATA_SIZE);
+    void *next_block = block + block_size;
+    size_t next_block_data = get_block_data(next_block);
+    
+    while (IS_FREE(next_block_data))
+    {
+        size_t next_block_size = get_block_size(next_block_data, S_META_DATA_SIZE);
+        block_size = get_block_size(block_data, S_META_DATA_SIZE);
+        if (GET_SIZE(next_block_data) == 0) // reached the end of the allocated blocks
+            return;
+        join_next_block(block);
+        next_block += next_block_size;
+        next_block_data = get_block_data(next_block);
+    }
+}
+
 void print_list(struct l_meta_data *list)
 {
     int i = 0;
