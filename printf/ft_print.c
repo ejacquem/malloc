@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljacquem <ljacquem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 07:26:32 by ljacquem          #+#    #+#             */
-/*   Updated: 2024/02/27 17:36:14 by ljacquem         ###   ########.fr       */
+/*   Updated: 2025/05/02 14:44:17 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ void	ft_printn(char c, int n)
 {
 	while (n-- > 0)
 		ft_putchar(c);
+}
+
+void	ft_printsn(char *s, int n)
+{
+	while (n-- > 0)
+		ft_putnstr(s, ft_strlen(s));
 }
 
 void	ft_printnb(unsigned long long n, t_format *t_f, int base)

@@ -6,6 +6,14 @@
 #include <string.h>
 #include "printf/ft_printf.h"
 
+enum SAM_format
+{
+	BASIC,
+	CUSTOM,
+	GRAPHIC,
+	HEXDUMP
+};
+
 struct s_meta_data
 {
     // size is the user allocated size
@@ -34,6 +42,7 @@ struct malloc_data
     size_t data_freed_count;
     void *zero_allocation;
     int first;
+	enum SAM_format sam_format;
 };
 
 struct zone_data
@@ -99,7 +108,13 @@ SMALL|  512|        528|     52800|        53248|      13
 void free(void *ptr);
 void *malloc(size_t size);
 void *realloc(void *ptr, size_t size);
+
 void show_alloc_mem();
+void show_alloc_mem_ex();
+void print_block(void *block, size_t block_size, size_t alloc_size, int is_free);
+void print_large(size_t *sum, void *zone);
+void print_zone(size_t *sum, void *zone, size_t zone_size);
+
 void *replace_block(void *block, size_t size);
 void join_next_block(void *block);
 void defragment_memory(void *block);

@@ -4,7 +4,7 @@ LIBS = $(PRINTF)
 
 CFLAGS = -g #-Wall -Werror -Wextra
 
-SRC = src/malloc.c src/free.c src/realloc.c src/utils.c src/show_alloc_mem.c
+SRC = src/malloc.c src/free.c src/realloc.c src/utils.c src/show_alloc_mem.c src/show_alloc_mem_ex.c
 
 OBJ = $(SRC:.c=.o)
 TESTOBJ = $(TEST:.c=.o)

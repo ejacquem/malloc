@@ -79,6 +79,12 @@ void free_small(void *ptr, void **zone_list, size_t zone_size)
     *block = SET_FREE(*block);
     struct zone_data *zone = get_block_zone(*zone_list, zone_size, block);
     zone->alloc_count--;
+
+
+	size_t *next_block = ((void *)block) + get_block_size(*block, S_META_DATA_SIZE);
+	if (GET_SIZE(*next_block) == 0) // if it's the last block, remove it
+		*block = 0;
+
     // zone->is_full = FALSE;
     if (zone->alloc_count == 0 && empty_zone_count(*zone_list) >= 2UL) // if zone is empty and at least one other empty zone exists
     // if (zone->alloc_count == 0 && (void *)zone != *zone_list) // if its not the first zone

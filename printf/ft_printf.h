@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljacquem <ljacquem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:33:40 by ljacquem          #+#    #+#             */
-/*   Updated: 2024/02/27 08:09:24 by ljacquem         ###   ########.fr       */
+/*   Updated: 2025/05/02 14:44:20 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void			ft_printn(char c, int n);
 void			ft_printp(unsigned long long n, t_format *t_f);
 void			ft_printc(char c, t_format *t_f);
 void			ft_prints(char *s, t_format *t_f);
+void			ft_printsn(char *s, int n);
 void			ft_printnb(unsigned long long n, t_format *t_f, int base);
 
 int				ft_logn(unsigned long long n, unsigned int base);
