@@ -1,5 +1,21 @@
 #include "../malloc.h"
 
+typedef enum ZONE_TYPE
+{
+	TINY,
+	SMALL,
+	LARGE
+} zone_type;
+
+zone_type get_zone_type_from_size(size_t size)
+{
+	if (size <= TINY_SIZE)
+		return TINY;
+	if (size <= SMALL_SIZE)
+		return SMALL;
+	return LARGE;
+}
+
 void *realloc(void *ptr, size_t size)
 {
     LOG("--- Realloc called ---");
@@ -19,21 +35,20 @@ void *realloc(void *ptr, size_t size)
     LOG("alloc_size: %ld", alloc_size);
     LOG("block_size: %ld", block_size);
     LOG("realloc_size: %ld", size);
+
+	char realloc_in_same_zone = get_zone_type_from_size(alloc_size) == get_zone_type_from_size(size);
     
-    if (alloc_size <= SMALL_SIZE && size <= SMALL_SIZE)
+    if (size <= SMALL_SIZE && realloc_in_same_zone)
     {
         LOG("Realloc SMALL");
         size_t block_usable_size = get_block_usable_size(alloc_size, S_META_DATA_SIZE);
 
-
-        if (size < (align_up(alloc_size, 16) - 16))
-            return replace_block(block, size);
-
         if (size <= block_usable_size)
-            return ptr;
+			return replace_block(block, size);
             
         defragment_memory(block); // defragment memory, will change alloc_size
-        if (size <= GET_SIZE(get_block_data(block)))
+
+		if (size <= GET_SIZE(get_block_data(block)))
             return replace_block(block, size);
         // replace_block(block, alloc_size); // put back alloc_size
 

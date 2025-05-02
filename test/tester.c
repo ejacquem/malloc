@@ -1,32 +1,36 @@
 #include "../malloc.h"
 #include "../printf/ft_printf.h"
 
+void test_realloc_bigger()
+{
+	int *a[10];
+
+	a[0] = malloc(300);
+	a[1] = malloc(300);
+	free(a[1]);
+	show_alloc_mem();
+	a[0] = realloc(a[0], 600);
+	show_alloc_mem();
+}
+
+void test_realloc_smaller()
+{
+	int *a;
+
+	size_t min_size = 16;
+	size_t max_size = 2048;
+
+	a = malloc(max_size);
+
+	for (size_t i = max_size; i > min_size; i /= 2)
+	{
+		a = realloc(a, i);
+		show_alloc_mem();
+	}
+
+}
+
 int main()
 {
-    // ft_printf("Hello\n");
-    // a = malloc(1024);
-    // ft_printf("malloc: %s\n", a == NULL ? "NULL" : "OK");
-    // a = malloc(2147483649 * 9.6);
-
-    int *a;
-    a = malloc(1024);
-    free(a);
-    a = malloc(1024);
-    free(a);
-    a = malloc(1024);
-    free(a);
-    a = malloc(1024);
-    free(a);
-
-    a = malloc(1024);
-    a = malloc(1024);
-    a = malloc(1024);
-    // for (int i = 0; i < 10; i++)
-    // {
-    //     a = malloc(1);
-    //     ft_printf("malloc: %s\n", a == NULL ? "NULL" : "OK");
-    // }
-    // ft_printf("Hello\n");
-
-    // show_alloc_mem();
+	test_realloc_smaller();
 }

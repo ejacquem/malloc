@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include "../malloc.h"
 
-// #define START_MALLOC_SIZE 1024*1024*128
+#define START_MALLOC_SIZE 1024*1024*128
 // #define STOP_MALLOC_SIZE  1024
-// #define STOP_MALLOC_SIZE  64
+
+#define STOP_MALLOC_SIZE  64
 
 // #define START_MALLOC_SIZE 1024*1024
-#define START_MALLOC_SIZE 1024
-#define STOP_MALLOC_SIZE  64
+// #define START_MALLOC_SIZE 1024
+// #define STOP_MALLOC_SIZE  64
 
 void dummy() { return; }
 
@@ -16,6 +17,7 @@ void *reduce(void *ptr, int size) {
   if (size > STOP_MALLOC_SIZE) {
     void *ptr1 = realloc(ptr, size / 2);
     void *ptr2 = malloc(size / 2);
+	// show_alloc_mem();
 
     if (ptr1 == NULL || ptr2 == NULL) {
       printf("Memory failed to allocate!\n");

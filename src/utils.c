@@ -74,22 +74,25 @@ void join_next_block(void *block)
 // append all contiguous free blocks after the current block to the current block
 void defragment_memory(void *block)
 {
-    LOG("Defragment");
+    LOG(" - Defragment memory -");
     size_t block_data = get_block_data(block);
     size_t block_size = get_block_size(block_data, S_META_DATA_SIZE);
     void *next_block = block + block_size;
     size_t next_block_data = get_block_data(next_block);
     
+	LOG("size before: %ld", GET_SIZE(block_data));
     while (IS_FREE(next_block_data))
     {
-        size_t next_block_size = get_block_size(next_block_data, S_META_DATA_SIZE);
+		LOG("next block is free");
+		size_t next_block_size = get_block_size(next_block_data, S_META_DATA_SIZE);
         block_size = get_block_size(block_data, S_META_DATA_SIZE);
         if (GET_SIZE(next_block_data) == 0) // reached the end of the allocated blocks
-            return;
+			return;
         join_next_block(block);
         next_block += next_block_size;
         next_block_data = get_block_data(next_block);
     }
+	LOG("size after: %ld", GET_SIZE(get_block_data(block)));
 }
 
 void print_list(struct l_meta_data *list)

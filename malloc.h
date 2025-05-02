@@ -45,7 +45,7 @@ struct zone_data
 
 extern struct malloc_data data;
 
-#define DEBUG
+// #define DEBUG
 
 #ifdef DEBUG
     #define LOG(fmt, ...) ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__)
@@ -87,12 +87,12 @@ SMALL|  512|        528|     52800|        53248|      13
 #define ZONE_DATA_SIZE sizeof(struct zone_data)
 
 // TINY zone size calculation
-#define TINY_BLOCK_SIZE (TINY_SIZE + S_META_DATA_SIZE)
+#define TINY_BLOCK_SIZE align_up(TINY_SIZE + S_META_DATA_SIZE, 16)
 #define TINY_ZONE CEIL(ZONE_DATA_SIZE + (TINY_BLOCK_SIZE * 100), PAGE_SIZE)
 #define TINY_PAGE_NB TINY_ZONE / PAGE_SIZE
 
 // SMALL zone size calculation
-#define SMALL_BLOCK_SIZE (SMALL_SIZE + S_META_DATA_SIZE)
+#define SMALL_BLOCK_SIZE align_up(SMALL_SIZE + S_META_DATA_SIZE, 16)
 #define SMALL_ZONE CEIL(ZONE_DATA_SIZE + (SMALL_BLOCK_SIZE * 100), PAGE_SIZE)
 #define SMALL_PAGE_NB SMALL_ZONE / PAGE_SIZE
 

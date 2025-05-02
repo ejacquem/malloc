@@ -41,12 +41,18 @@ void *replace_block(void *block, size_t size)
     *(size_t *)block = size;
     if (new_block_size < block_size) // if new block is smaller, split current block into one full and one free
     {
-        // LOG("Splitting block");
-        size_t *next_block = (size_t *)(block + new_block_size); 
-        *next_block = block_size - new_block_size - S_META_DATA_SIZE; // set next block size to (current - new)
-        *next_block = SET_FREE(*next_block);
-        // if (zone != NULL)
-        //     zone->is_full = FALSE;
+		size_t *next_block = (size_t *)(block + new_block_size);
+		if (GET_SIZE(get_block_data(block + block_size)) == 0) // if it's the last block, don't create a new one
+		{
+			// LOG("Shrinking last block");
+			*next_block = 0;
+		}
+		else
+		{
+			// LOG("Splitting block");
+			*next_block = block_size - new_block_size - S_META_DATA_SIZE; // set next block size to (current - new)
+			*next_block = SET_FREE(*next_block);
+		}
     }
     // LOG("returning pointer: %p", block + S_META_DATA_SIZE);
     // LOG("block_user_size: %ld", GET_SIZE(get_block_data(block)));

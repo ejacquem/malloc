@@ -57,6 +57,5 @@ fclean: clean
 
 deepclean: fclean
 	make fclean -C printf
-	rm -f $(LIB_NAME) tester
 
 re: fclean all
