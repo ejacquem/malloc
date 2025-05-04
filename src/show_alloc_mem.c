@@ -45,8 +45,6 @@ void print_large(size_t *sum, void *zone)
 
 void show_alloc_mem()
 {
-    show_alloc_mem_ex();
-    return;
 	data.sam_format = BASIC;
     size_t sum = 0;
 

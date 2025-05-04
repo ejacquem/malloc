@@ -47,10 +47,8 @@ void test_malloc_random()
 	show_alloc_mem();
 }
 
-int main()
+void test_malloc_hexdump()
 {
-	// test_realloc_smaller();
-	// test_malloc_random();
 	char *a = malloc(8);
 	a[0] = 1;
 	a[1] = 2;
@@ -65,5 +63,19 @@ int main()
 	malloc(88);
 	malloc(1370);
 	free(b);
-	show_alloc_mem();
+	show_alloc_mem_ex();
+}
+
+void test_malloc_chardump()
+{
+	char *a = malloc(32);
+	ft_memcpy(a, "Hello world !", 32);
+	show_alloc_mem_ex();
+}
+
+int main()
+{
+	// test_realloc_smaller();
+	// test_malloc_random();
+	test_malloc_chardump();
 }

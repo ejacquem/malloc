@@ -6,7 +6,7 @@
 /*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:33:40 by ljacquem          #+#    #+#             */
-/*   Updated: 2025/05/02 14:44:20 by lucas            ###   ########.fr       */
+/*   Updated: 2025/05/04 12:28:18 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ const char		*get_args(const char *c, t_format *t_f);
 unsigned long	tounsigned(long n, t_format *t_f);
 t_format		newf(void);
 
-int				ft_max(int a, int b);
-int				ft_min(int a, int b);
+long				ft_max(long a, long b);
+long				ft_min(long a, long b);
 void			handle_zero_edge_case(t_format *t_f);
 
 #endif

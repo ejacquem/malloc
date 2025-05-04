@@ -10,7 +10,6 @@ enum SAM_format
 {
 	BASIC,
 	CUSTOM,
-	GRAPHIC,
 	HEXDUMP
 };
 
@@ -38,11 +37,11 @@ struct malloc_data
     void *small; // pointer to the SMALL zone
     void *large; // pointer to the LARGE zone
     struct l_meta_data *last_large; // pointer to the LARGE zone
-    size_t data_allocated_count;
-    size_t data_freed_count;
-    void *zero_allocation;
-    int first;
-	enum SAM_format sam_format;
+    void *zero_allocation; // dummy pointer if malloc(0) is called
+	enum SAM_format sam_format; // show_alloc_mem format 
+    char first;   // bool to init once
+	char debug;   // bool to print debug
+	char hexdump; // bool to print hexdump
 };
 
 struct zone_data
@@ -54,14 +53,13 @@ struct zone_data
 
 extern struct malloc_data data;
 
-// #define DEBUG
+#define DEBUG
 
 #ifdef DEBUG
-    #define LOG(fmt, ...) ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__)
-    #define LOGLN ft_printf("[MALLOC]\n")
+    // #define LOG(fmt, ...) ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__)
+	#define LOG(fmt, ...) ((data.debug) ? ft_printf("[MALLOC] " fmt "\n", ##__VA_ARGS__) : 1)
 #else
     #define LOG(fmt, ...) 1
-    #define LOGLN 1
 #endif
 
 #define LOG_COLOR_RED "\x1b[38;5;160m"

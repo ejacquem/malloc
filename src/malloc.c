@@ -4,7 +4,6 @@ struct malloc_data data = {0};
 
 void * short_mmap(size_t size)
 {
-    LOGLN;
     LOG("MMAP called for size: %ld", size);
     void *addr = mmap(NULL, size, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0); 
     LOG("MMAP: %s", addr != NULL ? OK : FAIL);
@@ -156,23 +155,43 @@ void add_back(void **list, void *node)
     data.last_large = node;
 }
 
-void *malloc_large(void **zone, size_t size)
+void *malloc_large(size_t size)
 {
     void *new_block;
-    struct l_meta_data *block = *zone;
+    struct l_meta_data *block = data.large;
     size_t new_block_size = align_up(sizeof(struct l_meta_data) + size, 16);
 
     new_block = new_large_block(new_block_size, size);
     LOG("created new zone at: %p", new_block);
 
-    add_back(zone, new_block);
+    add_back(&data.large, new_block);
 
     return new_block + sizeof(struct l_meta_data);
 }
 
+int is_env_set(const char *env_name)
+{
+	const char *value = getenv(env_name);
+	ft_printf("%s: %s\n", env_name, value);
+	if (value)
+		return value[0] == '1' || ft_strncmp(value, "true", 5) == 0 || ft_strncmp(value, "TRUE", 5) == 0;
+	return FALSE;
+}
+
+void init()
+{
+    if (data.first)
+        return;
+    data.first = 1;
+	data.debug = is_env_set("MALLOC_DEBUG");
+	data.hexdump = is_env_set("MALLOC_HEXDUMP");
+
+	print_define();
+}
+
 void *malloc(size_t size)
 {
-    print_define();
+    init();
     void *addr;
 
     LOG("----- Malloc called -----");
@@ -181,14 +200,23 @@ void *malloc(size_t size)
     if (size == 0)
         return data.zero_allocation;
 
-    if (size <= TINY_SIZE && LOG("Browse TINY"))
-        addr = browse_all_zones(&data.tiny, TINY_ZONE, size);
-    else if (size <= SMALL_SIZE && LOG("Browse SMALL"))
-        addr = browse_all_zones(&data.small, SMALL_ZONE, size);
-    else if (LOG("Browse LARGE"))
-        addr = malloc_large(&data.large, size);
+    if (size <= TINY_SIZE)
+	{
+		LOG("Malloc TINY");
+		addr = browse_all_zones(&data.tiny, TINY_ZONE, size);
+	}
+    else if (size <= SMALL_SIZE)
+	{
+		LOG("Malloc SMALL");
+		addr = browse_all_zones(&data.small, SMALL_ZONE, size);
+	}
+    else
+	{
+		LOG("Malloc LARGE");
+		addr = malloc_large(size);
+	}
     
     LOG("Returning pointer: %p", addr);
-    LOGLN;
+    LOG("");
     return addr;
 }

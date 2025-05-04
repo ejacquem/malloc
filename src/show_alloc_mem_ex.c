@@ -10,12 +10,13 @@
 
 #define SAM_WIDTH 90
 
+#define SAM_PRINT_END(nb) ft_printn(' ', SAM_WIDTH - nb - 3); ft_printf("│\n");
 // #define SAM_PRINT(fmt, ...) int nb = ft_printf("│ " fmt, ##__VA_ARGS__,); ft_printf("%*s", 50-nb, "│");
 #define SAM_PRINT(fmt, ...) do { \
     int nb = ft_printf("│ " fmt, ##__VA_ARGS__); \
-	ft_printn(' ', SAM_WIDTH - nb - 3); \
-    ft_printf("│\n"); \
+	SAM_PRINT_END(nb); \
 } while (0)
+
 
 #define SAM_HEADER "───── SHOWING ALLOCATION MEMORY "
 #define SAM_PRINT_HEADER ft_printf("┌"SAM_HEADER); ft_printsn("─", SAM_WIDTH - 38); ft_printf("┐\n");
@@ -27,27 +28,57 @@
 // 	ft_printn(" ", block_size / 8);
 // }
 
-//00000000 0000 0000 0000 0000 0000 0000 0000 0000 
-// 1 byte 8 bits
-// 0000 = 2 bytes
+//hexdump format
+//0000000 0000 0000 0000 0000 0000 0000 0000 0000 
+//hexdump -C format 
+//00000000  23 69 6e 63 6c 75 64 65  20 3c 73 74 64 69 6f 2e  |#include <stdio.|
+
+size_t print_hexdump_char(void *ptr, size_t len)
+{
+	size_t count = 0;
+
+	count += ft_printf(" |");
+	for (size_t i = 0; i < len; i++)
+	{
+		char c = *(char *)(ptr + i);
+		c = ft_isprint(c) ? c : '.';
+		count += ft_printf("%c", c);
+	}
+	count += ft_printf("|");
+	return count;
+}
+
+size_t print_hexdump(void *ptr, size_t len)
+{
+	size_t count = 0;
+
+	for (size_t i = 0; i < len; i++)
+	{
+		if (i == 8)
+			count += ft_printf(" ");
+		char c = *(char *)(ptr + i);
+		
+		count += ft_printf("%02X", c);
+
+	}
+	return count;
+}
 
 void print_block_hex(void *block, size_t alloc_size)
 {
 	block += S_META_DATA_SIZE;
-	for (size_t i = 0; i < alloc_size;)
+	// SAM_PRINT ("%p : %ld bytes", block, alloc_size);
+	// SAM_PRINT ("%p : %ld bytes", block, alloc_size);
+	for (size_t i = 0; i < alloc_size; i += 16)
 	{
-		ft_printf ("%p ", block);
 		unsigned char *byte = (char *)(block + i);
-		// ft_printf ("%x ", byte);
-		for(size_t j = 0; j < 16 && i < alloc_size; j+=2, i+=2)
-		{
-			unsigned char first = *byte++;
-			unsigned char second = *byte++;
-			ft_printf ("%02X%02X ", first, second);
-		}
-		ft_printf ("\n");
+		int count = ft_printf ("│         %07x ", (void *)byte - block);
+		count += print_hexdump(byte, ft_min(alloc_size - i, 16));
+		count += print_hexdump_char(byte, ft_min(alloc_size - i, 16));
+		
+		SAM_PRINT_END(count);
 	}
-	ft_printf("");
+	SAM_PRINT("");
 }
 
 void print_block(void *block, size_t block_size, size_t alloc_size, int is_free)
@@ -57,7 +88,10 @@ void print_block(void *block, size_t block_size, size_t alloc_size, int is_free)
 	if (data.sam_format == CUSTOM)
 		SAM_PRINT(" %p : "PADDING"ld| "PADDING"ld| %s", block, alloc_size, block_size, (is_free ? "free" : ""));
 	if (data.sam_format == HEXDUMP)
+	{
+		SAM_PRINT(" %p : "PADDING"ld| "PADDING"ld| %s", block, alloc_size, block_size, (is_free ? "free" : ""));
 		print_block_hex(block, alloc_size);
+	}
 }
 
 size_t count_large_zone(struct l_meta_data *zone)
@@ -79,8 +113,12 @@ void show_alloc_mem_ex()
 {
     size_t sum = 0;
 	data.sam_format = CUSTOM;
+	if (data.hexdump)
+		data.sam_format = HEXDUMP;
 
 	SAM_PRINT_HEADER;
+	SAM_PRINT("[   pointer   ] :  alloc|  block|");
+	SAM_PRINT("");
 
     if (data.tiny)
 	{

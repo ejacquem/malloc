@@ -42,10 +42,10 @@ endif
 $(TEST_NAME): all
 	@echo "Building and running $@"
 ifeq ($(STD),1)
-	cc $(CFLAGS) -o tester test/$@.c
+	cc -Wno-unused-result $(CFLAGS) -o tester test/$@.c
 	$(TIME_CMD)
 else
-	cc $(CFLAGS) -o tester test/$@.c $(LIBS) ./$(LIB_NAME)
+	cc -Wno-unused-result $(CFLAGS) -o tester test/$@.c $(LIBS) ./$(LIB_NAME)
 	LD_PRELOAD=./libft_malloc.so $(TIME_CMD)
 endif
 

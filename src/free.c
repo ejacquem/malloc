@@ -71,6 +71,7 @@ void remove_node(struct l_meta_data **head, void *ptr) {
 
 void free_small(void *ptr, void **zone_list, size_t zone_size)
 {
+	LOG("Free SMALL or TINY");
     size_t *block = ((size_t *)ptr) - 1UL; // step back 8 bytes
 
     if (IS_FREE(*block))
@@ -89,7 +90,7 @@ void free_small(void *ptr, void **zone_list, size_t zone_size)
     if (zone->alloc_count == 0 && empty_zone_count(*zone_list) >= 2UL) // if zone is empty and at least one other empty zone exists
     // if (zone->alloc_count == 0 && (void *)zone != *zone_list) // if its not the first zone
     {
-        LOG(" ------------------------------------------ Removing a small zone");
+        LOG(" ------- Removing a small zone");
         // LOG("empty_zone_count(*zone_list): %ld", empty_zone_count(*zone_list));
         remove_zone_node((struct zone_data **)zone_list, zone);
         if (munmap(zone, zone_size) == 0)
@@ -101,6 +102,7 @@ void free_small(void *ptr, void **zone_list, size_t zone_size)
 
 void free_large(void *ptr)
 {
+	LOG("Free LARGE");
     struct l_meta_data *large_block = ((struct l_meta_data *)ptr) - 1UL;
     remove_node((void *)&data.large, large_block);
     // if (munmap(large_block, align_up(sizeof(struct l_meta_data) + GET_SIZE(large_block->size), 16)) == 0)
@@ -112,12 +114,14 @@ void free_large(void *ptr)
 
 void free(void *ptr)
 {
-    if (ptr == NULL)
-        return LOG("Free called on NULL"), (void)0;
-
-    LOG("Free called on pointer %p", ptr);
-    size_t size = GET_SIZE(*(((size_t *)ptr) - 1UL));
-    LOG("Free of size: %ld", size);
+	LOG("----- Free called -----");
+	LOG("Pointer %p", ptr);
+    
+	if (ptr == NULL)
+        return ;
+		
+	size_t size = GET_SIZE(*(((size_t *)ptr) - 1UL));
+	LOG("Size: %ld", size);
 
     if (size <= TINY_SIZE)
         free_small(ptr, &data.tiny, TINY_ZONE);
@@ -125,6 +129,4 @@ void free(void *ptr)
         free_small(ptr, &data.small, SMALL_ZONE);
     else
         free_large(ptr);
-
-    LOG("free succesful");
 }

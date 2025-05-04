@@ -18,16 +18,19 @@ zone_type get_zone_type_from_size(size_t size)
 
 void *realloc(void *ptr, size_t size)
 {
-    LOG("--- Realloc called ---");
+	LOG("----- Free called -----");
+
     if (ptr == NULL)
         return malloc(size);
     if (size == 0)
         return free(ptr), NULL;
+
+		
+	LOG("Pointer %p", ptr);
+	LOG("Size: %ld", size);
     
     void *block = ((size_t *)ptr) - 1L; // step back 8 bytes
-    LOG("ptr: %p", ptr);
     LOG("block: %p", block);
-    LOG("test");
     size_t block_data = get_block_data(block);
     size_t alloc_size = GET_SIZE(block_data);
     size_t block_size = get_block_size(block_data, S_META_DATA_SIZE);
@@ -37,10 +40,13 @@ void *realloc(void *ptr, size_t size)
     LOG("realloc_size: %ld", size);
 
 	char realloc_in_same_zone = get_zone_type_from_size(alloc_size) == get_zone_type_from_size(size);
+
+	if (realloc_in_same_zone)
+		LOG("Changing zone");
     
     if (size <= SMALL_SIZE && realloc_in_same_zone)
     {
-        LOG("Realloc SMALL");
+        LOG("Realloc SMALL or TINY");
         size_t block_usable_size = get_block_usable_size(alloc_size, S_META_DATA_SIZE);
 
         if (size <= block_usable_size)

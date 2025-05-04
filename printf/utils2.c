@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljacquem <ljacquem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:34:34 by ljacquem          #+#    #+#             */
-/*   Updated: 2024/02/27 08:09:31 by ljacquem         ###   ########.fr       */
+/*   Updated: 2025/05/04 12:28:59 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_min(int a, int b)
+long	ft_min(long a, long b)
 {
 	if (a < b)
 		return (a);
 	return (b);
 }
 
-int	ft_max(int a, int b)
+long	ft_max(long a, long b)
 {
 	if (a > (b))
 		return (a);
