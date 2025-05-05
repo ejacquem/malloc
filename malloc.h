@@ -127,7 +127,7 @@ void join_next_block(void *block);
 void defragment_memory(void *block);
 struct zone_data *get_block_zone(struct zone_data *list, size_t zone_size, void *ptr);
 
-
+// utils
 size_t align_up(size_t size, size_t base);
 void *get_user_data_pointer(void *ptr);
 size_t get_block_data(void *block);
@@ -136,6 +136,8 @@ size_t get_block_usable_size(size_t size, size_t meta_data_size);
 struct l_meta_data get_block_meta_data(void *block);
 void *get_zone_usr_data_ptr(void *zone);
 void print_define();
+size_t zone_count(struct zone_data *list);
+
 
 /*
 blocks are ogranised like this : [meta_data][user_data]

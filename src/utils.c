@@ -95,6 +95,18 @@ void defragment_memory(void *block)
 	LOG("size after: %ld", GET_SIZE(get_block_data(block)));
 }
 
+size_t zone_count(struct zone_data *list)
+{
+    size_t count = 0;
+
+    while(list)
+    {
+        count++;
+        list = list->next;
+    }
+    return count;
+}
+
 void print_list(struct l_meta_data *list)
 {
     int i = 0;

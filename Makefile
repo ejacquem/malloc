@@ -2,7 +2,7 @@ LIB_NAME = libft_malloc_$(HOSTTYPE).so
 PRINTF = printf/libftprintf.a
 LIBS = $(PRINTF)
 
-CFLAGS = -g #-Wall -Werror -Wextra
+CFLAGS = -g #-Wall -Werror -Wextra 
 
 SRC = src/malloc.c src/free.c src/realloc.c src/utils.c src/show_alloc_mem.c src/show_alloc_mem_ex.c
 
@@ -53,7 +53,7 @@ help:
 	@echo "===================== Malloc Help ====================="
 	@echo ""
 	@echo "Usage:"
-	@echo "  LD_PRELOAD=./libft_malloc.so [your_executable]    Run your program with custom malloc"
+	@echo "  LD_PRELOAD=./libft_malloc.so [your_executable]     Run your program with custom malloc"
 	@echo ""
 	@echo "  make [testname] [STD=1] [TIME=1] [SHORT=1]         Run test with optional flags, tests must be in test/ folder"
 	@echo ""
@@ -61,6 +61,10 @@ help:
 	@echo "  STD=1        Use standard library malloc instead of custom one"
 	@echo "  TIME=1       Prepend test execution with 'time' command"
 	@echo "  SHORT=1      Short time output"
+	@echo ""
+	@echo "Env:"
+	@echo "  MALLOC_DEBUG=1      Enable debug log"
+	@echo "  MALLOC_HEXDUMP=1    Enable hexdump for the show_alloc_mem_ex() function"
 	@echo ""
 	@echo "Example:"
 	@echo "  make test1 STD=1 TIME=1 SHORT=1"

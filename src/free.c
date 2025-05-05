@@ -120,11 +120,13 @@ void free(void *ptr)
 	LOG("Pointer %p", ptr);
     
 	if (ptr == NULL)
+    {
+        pthread_mutex_unlock(&data.freelock);
         return ;
+    }
 		
 	size_t size = GET_SIZE(*(((size_t *)ptr) - 1UL));
 	LOG("Size: %ld", size);
-
 
     if (size <= TINY_SIZE)
         free_small(ptr, &data.tiny, TINY_ZONE);

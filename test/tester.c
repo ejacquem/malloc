@@ -31,7 +31,6 @@ void test_realloc_smaller()
 		a = realloc(a, i);
 		show_alloc_mem();
 	}
-
 }
 
 void test_malloc_random()
@@ -73,9 +72,36 @@ void test_malloc_chardump()
 	show_alloc_mem_ex();
 }
 
+void test_malloc_multiple_zone()
+{
+	for (int i = 0; i < 200; i++)
+	{
+		malloc(128);
+	}
+	show_alloc_mem();
+	show_alloc_mem_ex();
+}
+
+void test_malloc_multiple_zone_fill()
+{
+	for (int i = 0; i < 2000; i++)
+	{
+		size_t size = 128;
+		char *a = malloc(size);
+		for (size_t j = 0; j < size; j++)
+		{
+			a[j] = 1;
+		}
+		realloc(a, 64);
+	}
+	show_alloc_mem_ex();
+}
+
 int main()
 {
 	// test_realloc_smaller();
 	// test_malloc_random();
-	test_malloc_chardump();
+	// test_malloc_chardump();
+	// test_malloc_multiple_zone();
+	test_malloc_multiple_zone_fill();
 }

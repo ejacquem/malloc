@@ -48,14 +48,23 @@ void show_alloc_mem()
     pthread_mutex_lock(&data.samlock);
 	data.sam_format = BASIC;
     size_t sum = 0;
+    struct zone_data *zone;
 
-    ft_printf("TINY : %p\n", data.tiny);
-    if (data.tiny)
+    zone = data.tiny;
+    ft_printf("TINY : %p\n", zone);
+    while (zone)
+    {
         print_zone(&sum, get_zone_usr_data_ptr(data.tiny), TINY_ZONE);
+        zone = zone->next;
+    }
 
-    ft_printf("SMALL: %p\n", data.small);
-    if (data.small)
-        print_zone(&sum, get_zone_usr_data_ptr(data.small), SMALL_ZONE);
+    zone = data.small;
+    ft_printf("SMALL: %p\n", zone);
+    while (zone)
+    {
+        print_zone(&sum, get_zone_usr_data_ptr(zone), SMALL_ZONE);
+        zone = zone->next;
+    }
 
     ft_printf("LARGE: %p\n", data.large);
     if (data.large)

@@ -78,7 +78,6 @@ void print_block_hex(void *block, size_t alloc_size)
 		
 		SAM_PRINT_END(count);
 	}
-	SAM_PRINT("");
 }
 
 void print_block(void *block, size_t block_size, size_t alloc_size, int is_free)
@@ -125,15 +124,27 @@ void show_alloc_mem_ex()
     if (data.tiny)
 	{
 		struct zone_data *zone = data.tiny;
-		SAM_PRINT("TINY: %4ld alloc:", zone->alloc_count);
-        print_zone(&sum, get_zone_usr_data_ptr(data.tiny), TINY_ZONE);
+		size_t count = zone_count(zone);
+		SAM_PRINT("TINY: %4ld zones:", count);
+		for (int i = 0; zone; i++)
+		{
+			SAM_PRINT("Zone: %ld: %4ld allocs:", i, zone->alloc_count);
+			print_zone(&sum, get_zone_usr_data_ptr(data.tiny), TINY_ZONE);
+			zone = zone->next;
+		}
 	}
 		
     if (data.small)
 	{
 		struct zone_data *zone = data.small;
-		SAM_PRINT("SMALL: %3ld alloc:", zone->alloc_count);
-		print_zone(&sum, get_zone_usr_data_ptr(data.small), SMALL_ZONE);
+		size_t count = zone_count(zone);
+		SAM_PRINT("SMALL: %3ld zones:", count);
+		for (int i = 0; zone; i++)
+		{
+			SAM_PRINT("Zone: %ld: %4ld allocs:", i, zone->alloc_count);
+			print_zone(&sum, get_zone_usr_data_ptr(data.small), SMALL_ZONE);
+			zone = zone->next;
+		}
 	}
 	
     if (data.large)

@@ -53,6 +53,7 @@ void *realloc_pthread_safe(void *ptr, size_t size)
 
 		if (size <= GET_SIZE(get_block_data(block)))
             return replace_block(block, size);
+        replace_block(block, alloc_size);
 
         LOG("Can't realloc for small/tiny");
     }
