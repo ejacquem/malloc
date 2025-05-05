@@ -136,15 +136,20 @@ void print_memory_tables()
 void print_define()
 {
     LOG("----- MALLOC INFO -----");
+    LOG("TINY_SIZE: %d bytes", TINY_SIZE);
     LOG("TINY_BLOCK_SIZE: %d bytes", TINY_BLOCK_SIZE);
     LOG("TINY_ZONE: %d bytes", TINY_ZONE);
     LOG("TINY_PAGE_NB: %d pages", TINY_PAGE_NB);
     LOG("Min block number: %d blocks", TINY_ZONE / TINY_BLOCK_SIZE);
     LOG("");
+    LOG("SMALL_SIZE: %d bytes", SMALL_SIZE);
     LOG("SMALL_BLOCK_SIZE: %d bytes", SMALL_BLOCK_SIZE);
     LOG("SMALL_ZONE: %d bytes", SMALL_ZONE);
     LOG("SMALL_PAGE_NB: %d pages", SMALL_PAGE_NB);
     LOG("Min block number: %d blocks", SMALL_ZONE / SMALL_BLOCK_SIZE);
+    LOG("");
+	LOG("%s: %s", ENV_DEBUG, getenv(ENV_DEBUG));
+	LOG("%s: %s", ENV_HEXDUMP, getenv(ENV_HEXDUMP));
     LOG("");
     LOG("data.tiny: %d", data.tiny);
     LOG("data.small: %d", data.small);

@@ -45,6 +45,7 @@ void print_large(size_t *sum, void *zone)
 
 void show_alloc_mem()
 {
+    pthread_mutex_lock(&data.samlock);
 	data.sam_format = BASIC;
     size_t sum = 0;
 
@@ -61,5 +62,5 @@ void show_alloc_mem()
         print_large(&sum, data.large);
 
     ft_printf("Total: %ld bytes\n", sum);
-    return;
+    pthread_mutex_unlock(&data.samlock);
 }

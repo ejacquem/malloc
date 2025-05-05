@@ -71,7 +71,7 @@ void print_block_hex(void *block, size_t alloc_size)
 	// SAM_PRINT ("%p : %ld bytes", block, alloc_size);
 	for (size_t i = 0; i < alloc_size; i += 16)
 	{
-		unsigned char *byte = (char *)(block + i);
+		unsigned char *byte = (unsigned char *)(block + i);
 		int count = ft_printf ("│         %07x ", (void *)byte - block);
 		count += print_hexdump(byte, ft_min(alloc_size - i, 16));
 		count += print_hexdump_char(byte, ft_min(alloc_size - i, 16));
@@ -84,7 +84,7 @@ void print_block_hex(void *block, size_t alloc_size)
 void print_block(void *block, size_t block_size, size_t alloc_size, int is_free)
 {
 	if (data.sam_format == BASIC)
-    	ft_printf("%p - %p : %ld bytes\n\n", block, block + block_size, alloc_size);
+    	ft_printf("%p - %p : %ld bytes\n", block, block + block_size, alloc_size);
 	if (data.sam_format == CUSTOM)
 		SAM_PRINT(" %p : "PADDING"ld| "PADDING"ld| %s", block, alloc_size, block_size, (is_free ? "free" : ""));
 	if (data.sam_format == HEXDUMP)
@@ -111,6 +111,8 @@ size_t count_large_zone(struct l_meta_data *zone)
 
 void show_alloc_mem_ex()
 {
+    pthread_mutex_lock(&data.samexlock);
+
     size_t sum = 0;
 	data.sam_format = CUSTOM;
 	if (data.hexdump)
@@ -142,5 +144,5 @@ void show_alloc_mem_ex()
     SAM_PRINT("Total: %ld bytes", sum);
 
 	SAM_PRINT_BOTTOM;
-    return;
+    pthread_mutex_unlock(&data.samexlock);
 }

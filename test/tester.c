@@ -68,8 +68,8 @@ void test_malloc_hexdump()
 
 void test_malloc_chardump()
 {
-	char *a = malloc(32);
-	ft_memcpy(a, "Hello world !", 32);
+	char *a = malloc(14);
+	ft_memcpy(a, "Hello world !", 14);
 	show_alloc_mem_ex();
 }
 

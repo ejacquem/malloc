@@ -4,6 +4,7 @@
 #include <sys/mman.h>
 #include <errno.h>
 #include <string.h>
+#include <pthread.h>
 #include "printf/ft_printf.h"
 
 enum SAM_format
@@ -42,6 +43,12 @@ struct malloc_data
     char first;   // bool to init once
 	char debug;   // bool to print debug
 	char hexdump; // bool to print hexdump
+    // mutex lock
+    pthread_mutex_t malock;
+    pthread_mutex_t realock;
+    pthread_mutex_t freelock;
+    pthread_mutex_t samlock;
+    pthread_mutex_t samexlock;
 };
 
 struct zone_data
@@ -68,6 +75,8 @@ extern struct malloc_data data;
 #define OK LOG_COLOR_GREEN "OK" LOG_RESET
 #define FAIL LOG_COLOR_RED "FAIL" LOG_RESET
 
+#define ENV_DEBUG "MALLOC_DEBUG"
+#define ENV_HEXDUMP "MALLOC_HEXDUMP"
 
 #define CEIL(x, base) ((x + base - 1) & ~(base - 1))
 #define MIN(a, b) (a < b ? a : b)

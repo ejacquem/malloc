@@ -7,7 +7,6 @@ CFLAGS = -g #-Wall -Werror -Wextra
 SRC = src/malloc.c src/free.c src/realloc.c src/utils.c src/show_alloc_mem.c src/show_alloc_mem_ex.c
 
 OBJ = $(SRC:.c=.o)
-TESTOBJ = $(TEST:.c=.o)
 
 ifeq ($(HOSTTYPE),)
     HOSTTYPE := $(shell uname -m)_$(shell uname -s)
@@ -48,6 +47,26 @@ else
 	cc -Wno-unused-result $(CFLAGS) -o tester test/$@.c $(LIBS) ./$(LIB_NAME)
 	LD_PRELOAD=./libft_malloc.so $(TIME_CMD)
 endif
+
+help:
+	@echo ""
+	@echo "===================== Malloc Help ====================="
+	@echo ""
+	@echo "Usage:"
+	@echo "  LD_PRELOAD=./libft_malloc.so [your_executable]    Run your program with custom malloc"
+	@echo ""
+	@echo "  make [testname] [STD=1] [TIME=1] [SHORT=1]         Run test with optional flags, tests must be in test/ folder"
+	@echo ""
+	@echo "Flags:"
+	@echo "  STD=1        Use standard library malloc instead of custom one"
+	@echo "  TIME=1       Prepend test execution with 'time' command"
+	@echo "  SHORT=1      Short time output"
+	@echo ""
+	@echo "Example:"
+	@echo "  make test1 STD=1 TIME=1 SHORT=1"
+	@echo "  make tester"
+	@echo ""
+	@echo "======================================================"
 
 clean:
 	rm -f $(OBJ) $(TESTOBJ) libft_malloc.so

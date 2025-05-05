@@ -114,6 +114,8 @@ void free_large(void *ptr)
 
 void free(void *ptr)
 {
+    pthread_mutex_lock(&data.freelock);
+
 	LOG("----- Free called -----");
 	LOG("Pointer %p", ptr);
     
@@ -123,10 +125,13 @@ void free(void *ptr)
 	size_t size = GET_SIZE(*(((size_t *)ptr) - 1UL));
 	LOG("Size: %ld", size);
 
+
     if (size <= TINY_SIZE)
         free_small(ptr, &data.tiny, TINY_ZONE);
     else if (size <= SMALL_SIZE)
         free_small(ptr, &data.small, SMALL_ZONE);
     else
         free_large(ptr);
+
+    pthread_mutex_unlock(&data.freelock);
 }

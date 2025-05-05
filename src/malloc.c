@@ -87,7 +87,7 @@ void *browse_zone(struct zone_data *zone, size_t zone_size, size_t size)
         }
         i += block_size;
     }
-    LOG("End of the zone reached");
+    // LOG("End of the zone reached");
     // zone->is_full = TRUE;
     return NULL;
 }
@@ -172,7 +172,6 @@ void *malloc_large(size_t size)
 int is_env_set(const char *env_name)
 {
 	const char *value = getenv(env_name);
-	ft_printf("%s: %s\n", env_name, value);
 	if (value)
 		return value[0] == '1' || ft_strncmp(value, "true", 5) == 0 || ft_strncmp(value, "TRUE", 5) == 0;
 	return FALSE;
@@ -183,24 +182,35 @@ void init()
     if (data.first)
         return;
     data.first = 1;
-	data.debug = is_env_set("MALLOC_DEBUG");
-	data.hexdump = is_env_set("MALLOC_HEXDUMP");
+	data.debug = is_env_set(ENV_DEBUG);
+	data.hexdump = is_env_set(ENV_HEXDUMP);
+
+	pthread_mutex_init(&data.malock, NULL);
+	pthread_mutex_init(&data.realock, NULL);
+	pthread_mutex_init(&data.freelock, NULL);
+	pthread_mutex_init(&data.samlock, NULL);
+	pthread_mutex_init(&data.samexlock, NULL);
 
 	print_define();
 }
 
 void *malloc(size_t size)
 {
-    init();
     void *addr;
+
+    pthread_mutex_lock(&data.malock);
+
+    init();
 
     LOG("----- Malloc called -----");
     LOG("size: %ld", size);
 
     if (size == 0)
-        return data.zero_allocation;
-
-    if (size <= TINY_SIZE)
+    {
+		LOG("Malloc ZERO");
+        addr = data.zero_allocation;
+    }
+    else if (size <= TINY_SIZE)
 	{
 		LOG("Malloc TINY");
 		addr = browse_all_zones(&data.tiny, TINY_ZONE, size);
@@ -218,5 +228,7 @@ void *malloc(size_t size)
     
     LOG("Returning pointer: %p", addr);
     LOG("");
+    pthread_mutex_unlock(&data.malock);
+
     return addr;
 }
