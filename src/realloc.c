@@ -19,7 +19,7 @@ zone_type get_zone_type_from_size(size_t size)
 void *realloc_pthread_safe(void *ptr, size_t size)
 {
 
-    if (ptr == NULL)
+    if (ptr == NULL || ptr == &data.zero_allocation)
         return malloc(size);
     if (size == 0)
         return free(ptr), NULL;
@@ -76,8 +76,8 @@ void *realloc_pthread_safe(void *ptr, size_t size)
 void *realloc(void *ptr, size_t size)
 {
     void *addr;
-    LOG("----- Realloc called -----");
     pthread_mutex_lock(&data.realock);
+    LOG("----- Realloc called -----");
     addr = realloc_pthread_safe(ptr, size);
     pthread_mutex_unlock(&data.realock);
     return addr;

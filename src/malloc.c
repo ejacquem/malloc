@@ -208,7 +208,7 @@ void *malloc(size_t size)
     if (size == 0)
     {
 		LOG("Malloc ZERO");
-        addr = data.zero_allocation;
+        addr = &data.zero_allocation;
     }
     else if (size <= TINY_SIZE)
 	{

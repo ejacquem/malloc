@@ -119,7 +119,7 @@ void free(void *ptr)
 	LOG("----- Free called -----");
 	LOG("Pointer %p", ptr);
     
-	if (ptr == NULL)
+	if (ptr == NULL || ptr == &data.zero_allocation)
     {
         pthread_mutex_unlock(&data.freelock);
         return ;

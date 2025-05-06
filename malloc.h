@@ -55,6 +55,7 @@ struct zone_data
 {
     struct zone_data *next;
     size_t alloc_count;
+	size_t dummy; // 8 bytes offset so the small_block are 16 bytes aligned
     // char is_full; // tells if the zone can't have more blocks. but it can be full and have free space
 };
 
