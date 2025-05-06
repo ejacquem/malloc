@@ -102,16 +102,17 @@ SMALL|  512|        528|     52800|        53248|      13
 #define L_META_DATA_SIZE sizeof(struct l_meta_data)
 #define PAGE_SIZE sysconf(_SC_PAGE_SIZE)
 #define ZONE_DATA_SIZE sizeof(struct zone_data)
+#define MIN_BLOCKS_PER_ZONE 10000
 
 // TINY zone size calculation
 #define TINY_BLOCK_SIZE align_up(TINY_SIZE + S_META_DATA_SIZE, 16)
-#define TINY_ZONE CEIL(ZONE_DATA_SIZE + (TINY_BLOCK_SIZE * 100), PAGE_SIZE)
-#define TINY_PAGE_NB TINY_ZONE / PAGE_SIZE
+#define TINY_ZONE CEIL(ZONE_DATA_SIZE + (TINY_BLOCK_SIZE * MIN_BLOCKS_PER_ZONE), PAGE_SIZE)
+#define TINY_PAGE_NB (TINY_ZONE / PAGE_SIZE)
 
 // SMALL zone size calculation
 #define SMALL_BLOCK_SIZE align_up(SMALL_SIZE + S_META_DATA_SIZE, 16)
-#define SMALL_ZONE CEIL(ZONE_DATA_SIZE + (SMALL_BLOCK_SIZE * 100), PAGE_SIZE)
-#define SMALL_PAGE_NB SMALL_ZONE / PAGE_SIZE
+#define SMALL_ZONE CEIL(ZONE_DATA_SIZE + (SMALL_BLOCK_SIZE * MIN_BLOCKS_PER_ZONE), PAGE_SIZE)
+#define SMALL_PAGE_NB (SMALL_ZONE / PAGE_SIZE)
 
 void free(void *ptr);
 void *malloc(size_t size);

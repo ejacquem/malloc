@@ -53,6 +53,40 @@ struct zone_data *get_block_zone(struct zone_data *list, size_t zone_size, void 
     return NULL;
 }
 
+// assign new size to the current block, split into 2 blocks if there is enough space for a new block
+// return ptr to user data
+void *replace_block(void *block, size_t size)
+{
+    LOG("replace block");
+    size_t new_block_size = get_block_size(size, S_META_DATA_SIZE);
+    size_t block_size = get_block_size(get_block_data(block), S_META_DATA_SIZE);
+    // LOG("block_user_size: %ld", GET_SIZE(get_block_data(block)));
+    // LOG("size: %ld", size);
+    // LOG("block_size: %ld", block_size);
+    // LOG("new_block_size: %ld", new_block_size);
+    if (new_block_size > block_size)
+        return LOG("ERROR: can't replace a block with a bigger size"), exit(1), NULL;
+    *(size_t *)block = size;
+    if (new_block_size < block_size) // if new block is smaller, split current block into one full and one free
+    {
+		size_t *next_block = (size_t *)(block + new_block_size);
+		// if (GET_SIZE(get_block_data(block + block_size)) == 0) // if it's the last block, don't create a new one
+		// {
+		// 	LOG("Shrinking last block");
+		// 	*next_block = 0;
+		// }
+		// else
+		// {
+			LOG("Splitting block");
+			*next_block = block_size - new_block_size - S_META_DATA_SIZE; // set next block size to (current - new)
+			*next_block = SET_FREE(*next_block);
+		// }
+    }
+    // LOG("returning pointer: %p", block + S_META_DATA_SIZE);
+    // LOG("block_user_size: %ld", GET_SIZE(get_block_data(block)));
+    return block + S_META_DATA_SIZE;
+}
+
 // join the next block to the current
 // modify current block size
 void join_next_block(void *block)

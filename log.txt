@@ -1,0 +1,4817 @@
+[MALLOC] ----- MALLOC INFO -----
+[MALLOC] TINY_SIZE: [38;5;228m128[0m bytes
+[MALLOC] TINY_BLOCK_SIZE: [38;5;228m144[0m bytes
+[MALLOC] TINY_ZONE: [38;5;228m147456[0m bytes
+[MALLOC] TINY_PAGE_NB: [38;5;228m36[0m pages
+[MALLOC] Min block number: [38;5;228m1024[0m blocks
+[MALLOC] 
+[MALLOC] SMALL_SIZE: [38;5;228m1024[0m bytes
+[MALLOC] SMALL_BLOCK_SIZE: [38;5;228m1040[0m bytes
+[MALLOC] SMALL_ZONE: [38;5;228m1040384[0m bytes
+[MALLOC] SMALL_PAGE_NB: [38;5;228m254[0m pages
+[MALLOC] Min block number: [38;5;228m1000[0m blocks
+[MALLOC] 
+[MALLOC] MALLOC_DEBUG: 1
+[MALLOC] MALLOC_HEXDUMP: 1
+[MALLOC] 
+[MALLOC] data.tiny: [38;5;228m0[0m
+[MALLOC] data.small: [38;5;228m0[0m
+[MALLOC] data.large: [38;5;228m0[0m
+[MALLOC] data.first: [38;5;228m1[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] init zone of size: [38;5;228m147456[0m
+[MALLOC] MMAP called for size: [38;5;228m147456[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] init state: [38;5;40mOK[0m
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af020[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af020[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m472[0m
+[MALLOC] Malloc SMALL
+[MALLOC] init zone of size: [38;5;228m1040384[0m
+[MALLOC] MMAP called for size: [38;5;228m1040384[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] init state: [38;5;40mOK[0m
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1020[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4096[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m4112[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e736000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e736010[0m
+[MALLOC] 
+[MALLOC] ----- Realloc called -----
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1600[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m1616[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e77c000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e77c010[0m
+[MALLOC] 
+[MALLOC] ----- Realloc called -----
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1024[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1200[0m
+[MALLOC] 
+[MALLOC] ----- Realloc called -----
+[MALLOC] Pointer [38;5;123m0x7f035e3b1200[0m
+[MALLOC] Size: [38;5;228m2048[0m
+[MALLOC] block: [38;5;123m0x7f035e3b11f8[0m
+[MALLOC] alloc_size: [38;5;228m1024[0m
+[MALLOC] block_size: [38;5;228m1040[0m
+[MALLOC] realloc_size: [38;5;228m2048[0m
+[MALLOC] Changing zone
+[MALLOC] Realloc LARGE
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2048[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m2064[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e735000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e735010[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e3b1200[0m
+[MALLOC] Size: [38;5;228m1024[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] realloc OK
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e736010[0m
+[MALLOC] Size: [38;5;228m4096[0m
+[MALLOC] Free LARGE
+[MALLOC] Removing first node: [38;5;123m0x7f035e736000[0m
+[MALLOC] new first: [38;5;123m0x7f035e77c000[0m
+[MALLOC] munmap succesful
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e3b1020[0m
+[MALLOC] Size: [38;5;228m472[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m(nil)[0m
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af020[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m47[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af030[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af030[0m
+[MALLOC] Size: [38;5;228m47[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m47[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af030[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af070[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m42[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af0e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af120[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m36[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af170[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af1a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af1e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af220[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m36[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af270[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af270[0m
+[MALLOC] Size: [38;5;228m36[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m36[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af270[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af270[0m
+[MALLOC] Size: [38;5;228m36[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af020[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m192[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1020[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af020[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af270[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af280[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af280[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af280[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m44[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af290[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af290[0m
+[MALLOC] Size: [38;5;228m44[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m44[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af290[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af2d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m39[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af340[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af370[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m33[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af3c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af3f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m38[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af430[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af460[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m33[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af4b0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af4b0[0m
+[MALLOC] Size: [38;5;228m33[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m33[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af4b0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af4b0[0m
+[MALLOC] Size: [38;5;228m33[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af280[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m80[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af4b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af280[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af510[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af520[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af520[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af520[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m42[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af530[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af530[0m
+[MALLOC] Size: [38;5;228m42[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m42[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af530[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af570[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m37[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af5e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af610[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m31[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af660[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af690[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m36[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af6d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af700[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m31[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af750[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af750[0m
+[MALLOC] Size: [38;5;228m31[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m31[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af750[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af750[0m
+[MALLOC] Size: [38;5;228m31[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af520[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af750[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af520[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af7c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af7d0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af7d0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af7d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af7e0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af7e0[0m
+[MALLOC] Size: [38;5;228m40[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af7e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af810[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m35[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af880[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af8b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af900[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af930[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m34[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af970[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af9a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af9f0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af9f0[0m
+[MALLOC] Size: [38;5;228m29[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af9f0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af9f0[0m
+[MALLOC] Size: [38;5;228m29[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4af7d0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m168[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b10f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af7d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4af9f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afa00[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afa00[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afa00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m37[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afa10[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afa10[0m
+[MALLOC] Size: [38;5;228m37[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m37[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afa10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afa40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afab0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afae0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afb30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afb60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m31[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afba0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afbd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afc20[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afc20[0m
+[MALLOC] Size: [38;5;228m26[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afc20[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afc20[0m
+[MALLOC] Size: [38;5;228m26[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afa00[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m120[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afc20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afa00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afca0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afcb0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afcb0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afcb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m38[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afcc0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afcc0[0m
+[MALLOC] Size: [38;5;228m38[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m38[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afcc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afcf0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m33[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afd60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afd90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m27[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afde0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afe10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afe50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afe80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m27[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afed0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afed0[0m
+[MALLOC] Size: [38;5;228m27[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m27[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afed0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afed0[0m
+[MALLOC] Size: [38;5;228m27[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4afcb0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m88[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afed0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4afcb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4aff30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4aff40[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4aff40[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4aff40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4aff50[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4aff50[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4aff50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4aff90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m36[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0000[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0030[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m30[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0080[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b00b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b00f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0130[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0170[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0170[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m47[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0170[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b01b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0200[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0200[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m47[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0200[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0200[0m
+[MALLOC] Size: [38;5;228m47[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0200[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0200[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0200[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0200[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m35[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0200[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0230[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m30[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0280[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0280[0m
+[MALLOC] Size: [38;5;228m30[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m46[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0280[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b02c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0310[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0310[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m46[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0310[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0310[0m
+[MALLOC] Size: [38;5;228m46[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0310[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0310[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0310[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0310[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m30[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0310[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0310[0m
+[MALLOC] Size: [38;5;228m30[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m52[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0310[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0350[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m47[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m47[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m46[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m46[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m52[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m52[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m47[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m47[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m46[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m46[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m47[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m47[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m46[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m46[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4aff40[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b03c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4aff40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0430[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0440[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0440[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0440[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0450[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0450[0m
+[MALLOC] Size: [38;5;228m41[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m41[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0450[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0490[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m36[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0500[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0530[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m30[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0580[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b05b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m35[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b05f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0620[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m30[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0670[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0670[0m
+[MALLOC] Size: [38;5;228m30[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m30[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0670[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0670[0m
+[MALLOC] Size: [38;5;228m30[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0440[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m432[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b11a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0440[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0670[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0680[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0680[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0680[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0690[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0690[0m
+[MALLOC] Size: [38;5;228m40[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0690[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b06c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m35[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0730[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0760[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b07b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b07e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m34[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0820[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0850[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08a0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b08a0[0m
+[MALLOC] Size: [38;5;228m29[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08a0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b08a0[0m
+[MALLOC] Size: [38;5;228m29[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0680[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m216[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1360[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0680[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08b0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b08b0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m37[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08c0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b08c0[0m
+[MALLOC] Size: [38;5;228m37[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m37[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0960[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0990[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b09e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0a10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m31[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0a50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0a80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ad0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0ad0[0m
+[MALLOC] Size: [38;5;228m26[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ad0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0ad0[0m
+[MALLOC] Size: [38;5;228m26[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b08b0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1336[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m1360[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e3a6000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3a6010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b08b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ad0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ae0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0ae0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ae0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0af0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0af0[0m
+[MALLOC] Size: [38;5;228m40[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0af0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0b20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m35[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0b90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0bc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0c10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0c40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m34[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0c80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0cb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0d00[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0d00[0m
+[MALLOC] Size: [38;5;228m29[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0d00[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0d00[0m
+[MALLOC] Size: [38;5;228m29[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0ae0[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m112[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0d00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ae0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0d80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0d90[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0d90[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0d90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m38[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0da0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0da0[0m
+[MALLOC] Size: [38;5;228m38[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m38[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0da0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m104[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0dd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m33[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0e40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0e70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m27[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ec0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m56[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0ef0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0f30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m72[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0f60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m27[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0fb0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0fb0[0m
+[MALLOC] Size: [38;5;228m27[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m27[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0fb0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0fb0[0m
+[MALLOC] Size: [38;5;228m27[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b0d90[0m
+[MALLOC] Size: [38;5;228m5[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m776[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1440[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0d90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0fb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0fc0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m(nil)[0m
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m(nil)[0m
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0fd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b0fe0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m208[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1750[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m208[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1830[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1020[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1264[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m1280[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e34d000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e34d010[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e34d010[0m
+[MALLOC] Size: [38;5;228m1264[0m
+[MALLOC] Free LARGE
+[MALLOC] Removing node: [38;5;123m0x7f035e34d000[0m
+[MALLOC] munmap succesful
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1030[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1024[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1910[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m216[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1d20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m472[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1e00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m120[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1050[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4096[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m4112[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e34c000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e34c010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m542[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1fe0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m544[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b2210[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m64[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b10d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1120[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m540[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b2440[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m64[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1160[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m539[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b2670[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m64[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b11b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m540[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b28a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1200[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b1050[0m
+[MALLOC] Size: [38;5;228m120[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m544[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b2ad0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m64[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Splitting block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1050[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e34c010[0m
+[MALLOC] Size: [38;5;228m4096[0m
+[MALLOC] Free LARGE
+[MALLOC] Removing node: [38;5;123m0x7f035e34c000[0m
+[MALLOC] munmap succesful
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e3b1e00[0m
+[MALLOC] Size: [38;5;228m472[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m472[0m
+[MALLOC] Malloc SMALL
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b1e00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4096[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m4112[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e34c000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e34c010[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m(nil)[0m
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e34c010[0m
+[MALLOC] Size: [38;5;228m4096[0m
+[MALLOC] Free LARGE
+[MALLOC] Removing node: [38;5;123m0x7f035e34c000[0m
+[MALLOC] munmap succesful
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e3b1e00[0m
+[MALLOC] Size: [38;5;228m472[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m(nil)[0m
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Splitting block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b10a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b10b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1240[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m24[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1260[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1280[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m24[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b12a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b12c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b12e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1310[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8192[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m8208[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e34b000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e34b010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1330[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4096[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m4112[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e349000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e349010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1350[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4096[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m4112[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e347000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e347010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1370[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b13b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b13d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b13f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m18[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1420[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1440[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1470[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b14b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b14c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b14d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1500[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1520[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1540[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m22[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1580[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m22[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b15a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b15c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b15f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m24[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1600[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1620[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1660[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1680[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b16a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b16d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m23[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b16e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1700[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1740[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1760[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1780[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m37[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b17b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b17e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1820[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1860[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1870[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1880[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b18b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m18[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b18d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b18f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1930[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1940[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1950[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m22[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b19a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b19d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1a10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1a20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1a30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1a60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1a70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1a90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1ad0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1af0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1b10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1b40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m23[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1b60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1b80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1bc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1bd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1be0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1c10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m17[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1c30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1c50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1c90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1ca0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1cb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1ce0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1cf0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1d10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1d50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1d70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1d90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m21[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1dc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m33[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1de0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1e10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1e50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1e70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1e90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1509[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m1536[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e346000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e346010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1519[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m1536[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e345000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e345010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1ec0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m15[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1f00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m15[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1f20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1f40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1f70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m17[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1f80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1fa0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b1fe0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2000[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2020[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2050[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2070[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b20a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b20e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b20f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2100[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m17[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2130[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m25[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2150[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2180[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b21c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b21e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2200[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m24[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2230[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m34[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2250[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2280[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b22c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b22d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b22e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m15[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2310[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m20[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2330[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2350[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2390[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b23b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b23d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m23[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2400[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2420[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2450[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2490[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b24a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b24b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b24e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b24f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2510[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2550[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2560[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2570[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m3[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b25a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b25b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b25d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2610[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2620[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2630[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2660[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2670[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2680[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b26c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b26e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2700[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2730[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2740[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2760[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b27a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b27c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b27e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2810[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2830[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2860[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b28a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b28b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b28c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b28f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m33[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2920[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2950[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2990[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b29b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b29d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2a00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m15[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2a10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2a30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2a70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2a90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2ab0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m51[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2ae0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m65[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2b20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2b70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2bb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2bc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2bd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m741[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b2d00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m746[0m
+[MALLOC] Malloc SMALL
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e3b2ff0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2c00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m25[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2c40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m25[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2c70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2ca0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m29[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2cd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m54[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2d00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2d40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2d80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2da0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2dc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2df0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2e00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2e20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2e60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2e80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2ea0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m27[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2ed0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2f00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2f30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2f70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2f90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2fb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m39[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2fe0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m53[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3050[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3090[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b30a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b30b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b30e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m19[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3100[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3120[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3160[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3170[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3180[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b31b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b31d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m22[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b31f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m22[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3210[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b31f0[0m
+[MALLOC] Size: [38;5;228m22[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3230[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Splitting block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b31f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3200[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3270[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b32a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b32c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3300[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3310[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3320[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m3[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3350[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3360[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b33a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b33b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b33c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m3[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b33f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3400[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3440[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3450[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3460[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3490[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b34a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b34e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b34f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3500[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3530[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3550[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3590[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b35b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b35d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m20[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3600[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3620[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3660[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3680[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b36a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b36d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b36f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3730[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3750[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3770[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m3[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b37a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b37b0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b2670[0m
+[MALLOC] Size: [38;5;228m8[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b2660[0m
+[MALLOC] Size: [38;5;228m2[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b37c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2660[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b2670[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3800[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3830[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3840[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3880[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3890[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b38a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b38d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b38e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3920[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3930[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3940[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3970[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m23[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m28[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] Size: [38;5;228m28[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3980[0m
+[MALLOC] Size: [38;5;228m23[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m21[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] Size: [38;5;228m21[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3980[0m
+[MALLOC] Size: [38;5;228m16[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m15[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m20[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] Size: [38;5;228m20[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3980[0m
+[MALLOC] Size: [38;5;228m15[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m15[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] Size: [38;5;228m15[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3980[0m
+[MALLOC] Size: [38;5;228m10[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3980[0m
+[MALLOC] Size: [38;5;228m9[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3980[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] Size: [38;5;228m14[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b39f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3a00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3a30[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3980[0m
+[MALLOC] Size: [38;5;228m14[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3a50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3a90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3ab0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m18[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3ae0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3b00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3b40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3b60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3b80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3bb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3be0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3c10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3c40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3c50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3c80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3c90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m3[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3cc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3cd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3d00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3d10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3d40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3d50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m20[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3d80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m31[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3da0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3dd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3de0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3dd0[0m
+[MALLOC] Size: [38;5;228m2[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3de0[0m
+[MALLOC] Size: [38;5;228m12[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3dd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m1[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3de0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3dd0[0m
+[MALLOC] Size: [38;5;228m1[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3de0[0m
+[MALLOC] Size: [38;5;228m1[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3de0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3e20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3e40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3e60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m26[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3e90[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x7f035e4b3da0[0m
+[MALLOC] Size: [38;5;228m31[0m
+[MALLOC] Free SMALL or TINY
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3ec0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Splitting block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3da0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Splitting block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3db0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3f00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3dc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3f30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC]  - Found free block
+[MALLOC] replace block
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3dd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3f70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3f80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m5[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3fb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b3fc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4000[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4020[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4050[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4090[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m11[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b40b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b40d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4100[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4140[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4160[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4180[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b41b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b41f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4210[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4230[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4260[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b42a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b42b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b42c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b42f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4330[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4340[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4350[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4380[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b43c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b43d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b43e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4410[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4450[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4460[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4470[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b44a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b44e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4500[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4520[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4550[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4590[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m14[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b45b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b45d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4600[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4640[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4650[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4660[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4690[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b46d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b46f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4710[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4740[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4780[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b47a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b47c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b47f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4820[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4850[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4890[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m7[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b48a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b48b0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b48e0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4910[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4940[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4980[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b49a0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b49c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b49f0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4a20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4a50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4a90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4ab0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4ad0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4b00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4b30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4b60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4ba0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4bc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4be0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4c10[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4c40[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4c70[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4cb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4cd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4cf0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4d20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4d50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4d80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4dc0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m10[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4de0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4e00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4e30[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8192[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m8208[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e342000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e342010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4e50[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4e90[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m13[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4eb0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4ed0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m16[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4f00[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8192[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m8208[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e33f000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e33f010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4f20[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4f60[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m9[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4f80[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4fa0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m40[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b4fd0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5000[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5030[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5070[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m6[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5080[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5090[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m3[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b50c0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m48[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b50d0[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5110[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m8[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5120[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m32[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5130[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5160[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m2032[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m2048[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e33e000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e33e010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m4080[0m
+[MALLOC] Malloc LARGE
+[MALLOC] MMAP called for size: [38;5;228m4096[0m
+[MALLOC] MMAP: [38;5;40mOK[0m
+[MALLOC] created new zone at: [38;5;123m0x7f035e33d000[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e33d010[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m15[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5170[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m(nil)[0m
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m24[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b5190[0m
+[MALLOC] 
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m12[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b51b0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m(nil)[0m
+[MALLOC] ----- Malloc called -----
+[MALLOC] size: [38;5;228m93[0m
+[MALLOC] Malloc TINY
+[MALLOC] Found space in zone index [38;5;228m0[0m
+[MALLOC] Returning pointer: [38;5;123m0x7f035e4b51d0[0m
+[MALLOC] 
+[MALLOC] ----- Free called -----
+[MALLOC] Pointer [38;5;123m0x55cc432d3610[0m
+[MALLOC] Size: [38;5;228m881[0m
+[MALLOC] Free SMALL or TINY

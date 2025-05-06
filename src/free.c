@@ -71,7 +71,7 @@ void remove_node(struct l_meta_data **head, void *ptr) {
 
 void free_small(void *ptr, void **zone_list, size_t zone_size)
 {
-	LOG("Free SMALL or TINY");
+    LOG("Free SMALL or TINY");
     size_t *block = ((size_t *)ptr) - 1UL; // step back 8 bytes
 
     if (IS_FREE(*block))
@@ -82,9 +82,9 @@ void free_small(void *ptr, void **zone_list, size_t zone_size)
     zone->alloc_count--;
 
 
-	size_t *next_block = ((void *)block) + get_block_size(*block, S_META_DATA_SIZE);
-	if (GET_SIZE(*next_block) == 0) // if it's the last block, remove it
-		*block = 0;
+    size_t *next_block = ((void *)block) + get_block_size(*block, S_META_DATA_SIZE);
+    if (GET_SIZE(*next_block) == 0) // if it's the last block, remove it
+        *block = 0;
 
     // zone->is_full = FALSE;
     if (zone->alloc_count == 0 && empty_zone_count(*zone_list) >= 2UL) // if zone is empty and at least one other empty zone exists
@@ -102,7 +102,7 @@ void free_small(void *ptr, void **zone_list, size_t zone_size)
 
 void free_large(void *ptr)
 {
-	LOG("Free LARGE");
+    LOG("Free LARGE");
     struct l_meta_data *large_block = ((struct l_meta_data *)ptr) - 1UL;
     remove_node((void *)&data.large, large_block);
     // if (munmap(large_block, align_up(sizeof(struct l_meta_data) + GET_SIZE(large_block->size), 16)) == 0)
@@ -116,17 +116,17 @@ void free(void *ptr)
 {
     pthread_mutex_lock(&data.freelock);
 
-	LOG("----- Free called -----");
-	LOG("Pointer %p", ptr);
+    LOG("----- Free called -----");
+    LOG("Pointer %p", ptr);
     
-	if (ptr == NULL || ptr == &data.zero_allocation)
+    if (ptr == NULL || ptr == &data.zero_allocation || (size_t)ptr < 0x700000000000UL)
     {
         pthread_mutex_unlock(&data.freelock);
         return ;
     }
-		
-	size_t size = GET_SIZE(*(((size_t *)ptr) - 1UL));
-	LOG("Size: %ld", size);
+        
+    size_t size = GET_SIZE(*(((size_t *)ptr) - 1UL));
+    LOG("Size: %ld", size);
 
     if (size <= TINY_SIZE)
         free_small(ptr, &data.tiny, TINY_ZONE);

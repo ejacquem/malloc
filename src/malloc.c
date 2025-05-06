@@ -24,50 +24,16 @@ int init_zone(void **zone, size_t size)
     return *zone != NULL;
 }
 
-// assign new size to the current block, split into 2 blocks if there is enough space for a new block
-// return ptr to user data
-void *replace_block(void *block, size_t size)
-{
-    LOG("replace block");
-    size_t new_block_size = get_block_size(size, S_META_DATA_SIZE);
-    size_t block_size = get_block_size(get_block_data(block), S_META_DATA_SIZE);
-    // LOG("block_user_size: %ld", GET_SIZE(get_block_data(block)));
-    // LOG("size: %ld", size);
-    // LOG("block_size: %ld", block_size);
-    // LOG("new_block_size: %ld", new_block_size);
-    if (new_block_size > block_size)
-        return LOG("ERROR: can't replace a block with a bigger size"), exit(1), NULL;
-    *(size_t *)block = size;
-    if (new_block_size < block_size) // if new block is smaller, split current block into one full and one free
-    {
-		size_t *next_block = (size_t *)(block + new_block_size);
-		if (GET_SIZE(get_block_data(block + block_size)) == 0) // if it's the last block, don't create a new one
-		{
-			// LOG("Shrinking last block");
-			*next_block = 0;
-		}
-		else
-		{
-			// LOG("Splitting block");
-			*next_block = block_size - new_block_size - S_META_DATA_SIZE; // set next block size to (current - new)
-			*next_block = SET_FREE(*next_block);
-		}
-    }
-    // LOG("returning pointer: %p", block + S_META_DATA_SIZE);
-    // LOG("block_user_size: %ld", GET_SIZE(get_block_data(block)));
-    return block + S_META_DATA_SIZE;
-}
-
 // algorithm used for TINY and SMALL zone
 void *browse_zone(struct zone_data *zone, size_t zone_size, size_t size)
 {
     size_t new_block_size = get_block_size(size, S_META_DATA_SIZE);
-    const int zone_limit = zone_size - new_block_size; 
+    const size_t zone_limit = zone_size - new_block_size; 
     void *block;
     void *zone_start = zone + 1L;
     size_t block_data, alloc_size, block_size;
 
-    for (int i = 0; i < zone_limit;)
+    for (size_t i = 0; i < zone_limit;)
     {
         block = zone_start + i;
         block_data = get_block_data(block);
@@ -204,6 +170,8 @@ void *malloc(size_t size)
 
     LOG("----- Malloc called -----");
     LOG("size: %ld", size);
+
+	size += 32;
 
     if (size == 0)
     {
