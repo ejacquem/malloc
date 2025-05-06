@@ -143,6 +143,20 @@ int is_env_set(const char *env_name)
 	return FALSE;
 }
 
+void	*calloc(size_t n, size_t size)
+{
+	void	*ptr;
+
+	if (n == 0 || size == 0)
+		return (malloc(0));
+	if (n > INT_MAX || size > INT_MAX || n * size > INT_MAX)
+		return (NULL);
+	ptr = (void *)malloc(n * size);
+	if (ptr)
+		ft_bzero(ptr, n * size);
+	return (ptr);
+}
+
 void init()
 {
     if (data.first)
